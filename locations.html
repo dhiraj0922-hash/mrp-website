@@ -234,6 +234,14 @@ p { margin: 0 0 1em; }
 .loc-card h4 { color: var(--saffron); font-size: 1.15rem; margin-bottom: .35rem; }
 .loc-card p { margin: 0; font-size: .88rem; color: rgba(246,239,226,.7); }
 .loc-card .hrs { font-size: .78rem; color: var(--saffron); margin-top: .5rem; font-weight: 500; }
+.loc-card .loc-address { display: inline-flex; align-items: center; gap: .35rem; color: rgba(246,239,226,.78); text-decoration: underline; text-decoration-color: rgba(242,182,72,.45); text-underline-offset: .18em; }
+.loc-card .loc-address:hover { color: var(--cream); text-decoration-color: var(--saffron); }
+.loc-card-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1rem; }
+.loc-card-action { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: .72rem 1rem; border-radius: 999px; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: all .2s ease; }
+.loc-card-action.directions { border: 1px solid rgba(246,239,226,.18); color: var(--cream); background: rgba(246,239,226,.04); }
+.loc-card-action.directions:hover { border-color: var(--saffron); color: var(--saffron); background: rgba(242,182,72,.08); }
+.loc-card-action.order { background: var(--curry-red); color: var(--cream); box-shadow: 0 10px 24px -12px rgba(215,48,32,.8); }
+.loc-card-action.order:hover { background: #c42a1d; color: var(--cream); transform: translateY(-1px); }
 .late-v2 { background: #0F0A06; color: var(--cream); padding: clamp(4rem, 9vw, 8rem) 0 clamp(3rem, 7vw, 6rem); position: relative; overflow: hidden; }
 .late-v2::before { content: ''; position: absolute; top: -300px; right: -300px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(242, 182, 72, 0.15), transparent 65%); }
 .late-v2::after { content: ''; position: absolute; bottom: -200px; left: -200px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(215, 48, 32, 0.12), transparent 70%); }
@@ -427,7 +435,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const addressLine = location.note
       ? `${escapeHtml(location.address)} — ${escapeHtml(location.note)}`
       : escapeHtml(location.address);
-    return `<a href="${escapeHtml(location.orderUrl)}" class="loc-card" data-map-url="${escapeHtml(location.mapUrl)}"><h4>${escapeHtml(location.name)}</h4><p>${addressLine}</p><p class="hrs">${escapeHtml(location.hoursText)}</p></a>`;
+    const mapUrl = escapeHtml(location.mapsUrl || location.mapUrl || '#');
+    return `<article class="loc-card"><h4>${escapeHtml(location.name)}</h4><p><a href="${mapUrl}" class="loc-address" target="_blank" rel="noopener noreferrer">${addressLine}</a></p><p class="hrs">${escapeHtml(location.hoursText)}</p><div class="loc-card-actions"><a href="${mapUrl}" class="loc-card-action directions" target="_blank" rel="noopener noreferrer">Get Directions</a><a href="${escapeHtml(location.orderUrl)}" class="loc-card-action order">Order Pickup</a></div></article>`;
   };
 
   async function loadLocations() {
