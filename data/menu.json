@@ -197,10 +197,10 @@
       "dietaryTags": [
         "vegan"
       ],
-      "upsellText": "+ Butter roti +$2 · pairs perfectly",
+      "upsellText": "+ Butter roti +$2 · perfect pairing",
       "upsellLabel": "+ Butter roti",
       "upsellPrice": 2,
-      "upsellNote": "pairs perfectly",
+      "upsellNote": "perfect pairing",
       "addUpsellPrompt": "Add a roti — perfect with chole!",
       "available": true,
       "filters": [
