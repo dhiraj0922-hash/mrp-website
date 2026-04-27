@@ -936,9 +936,9 @@
     {
       "id": "ninety-second-biryani",
       "kind": "combo",
-      "name": "90-Second Biryani",
+      "name": "Chicken Dum Biryani Combo",
       "category": "Combos",
-      "description": "Ready in 90 sec",
+      "description": "Fast pickup favorite",
       "price": 15.99,
       "image": "assets/90-Second-biryani.png",
       "artKey": "combo-90-second-biryani",
@@ -957,7 +957,7 @@
       "intent": "Fastest pick",
       "intentClass": "late",
       "featured": false,
-      "prepNote": "Ready in 90 sec"
+      "prepNote": "Fast pickup favorite"
     }
   ]
 }
