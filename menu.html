@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — My Roti Place</title>
+  <meta name="description" content="Browse the full My Roti Place menu. Butter chicken roti, dum biryani, vegan picks, late-night hits and more across Toronto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    /* ── Tokens (matches homepage exactly) ── */
+    :root {
+      --cream:           #F6EFE2;
+      --cream-deep:      #EDE3CE;
+      --charcoal:        #1F1A15;
+      --ink:             #2B2520;
+      --muted:           #6B5F52;
+      --line:            #D9CDB5;
+      --turmeric:        #E8A530;
+      --turmeric-deep:   #C4861C;
+      --curry-red:       #9E2B1F;
+      --curry-red-deep:  #7A1D14;
+      --saffron:         #F2B648;
+      --leaf:            #5B6E3A;
+      --action:          #9E2B1F;
+      --action-deep:     #7A1D14;
+      --f-display:       'Playfair Display', Georgia, serif;
+      --f-body:          'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--f-body);
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Container ── */
+    .container {
+      width: min(1200px, 100% - 2rem);
+      margin-inline: auto;
+    }
+
+    /* ── Trust bar ── */
+    .trust-bar {
+      background: var(--charcoal);
+      color: rgba(246,239,226,.75);
+      font-size: .78rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: .55rem 1rem;
+    }
+    .trust-bar .pip { display: flex; align-items: center; gap: .4rem; }
+    .trust-bar svg  { width: 14px; height: 14px; fill: var(--saffron); flex-shrink: 0; }
+    .trust-bar strong { color: var(--cream); }
+    @media (max-width: 640px) { .hide-mobile { display: none; } }
+
+    /* ── Header (identical to homepage) ── */
+    .site-header {
+      background: rgba(246,239,226,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: .85rem 0;
+    }
+    .brand-logo img { display: block; height: 38px; width: auto; }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--ink);
+      transition: color .15s;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] { color: var(--action); }
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .btn-find {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      padding: .45rem .9rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      transition: border-color .15s, color .15s;
+    }
+    .btn-find:hover { border-color: var(--action); color: var(--action); }
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--action);
+      color: var(--cream);
+      font-size: .85rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: .5rem 1.1rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .btn-action:hover { background: var(--action-deep); }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: .35rem; }
+    .menu-toggle svg { width: 24px; height: 24px; color: var(--charcoal); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+    }
+
+    /* ── Page intro ── */
+    .menu-intro {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .menu-intro h1 {
+      font-family: var(--f-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1;
+      color: var(--charcoal);
+      margin-bottom: .5rem;
+    }
+    .menu-intro h1 em { font-style: italic; color: var(--action); font-weight: 400; }
+    .menu-intro p {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 50ch;
+      margin-top: .5rem;
+    }
+
+    /* ── Filter chips ── */
+    .menu-chips {
+      position: sticky;
+      top: 65px;
+      z-index: 90;
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+      padding: .75rem 0;
+    }
+    .menu-chips .container {
+      display: flex;
+      gap: .5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .menu-chips .container::-webkit-scrollbar { display: none; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      white-space: nowrap;
+      background: var(--cream-deep);
+      color: var(--ink);
+      font-size: .8rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: .38rem .85rem;
+      border-radius: 999px;
+      border: 1.5px solid transparent;
+      transition: all .15s;
+      flex-shrink: 0;
+    }
+    .chip:hover { border-color: var(--action); color: var(--action); }
+    .chip.hot {
+      background: var(--action);
+      color: var(--cream);
+      border-color: var(--action);
+    }
+
+    /* ── Hits grid (4 cards, matches homepage) ── */
+    .section-block {
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-block:last-child { border-bottom: none; }
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-label h2 {
+      font-family: var(--f-display);
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      color: var(--charcoal);
+    }
+    .section-label h2 em { font-style: italic; color: var(--action); font-weight: 400; }
+    .eyebrow-tag {
+      background: var(--saffron);
+      color: var(--charcoal);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .2rem .65rem;
+      border-radius: 999px;
+    }
+
+    /* Hit card grid — 4 across on desktop */
+    .hits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+    @media (max-width: 960px) { .hits-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .hits-grid { grid-template-columns: 1fr; } }
+
+    .hit-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 14px 28px -22px rgba(31,26,21,.18);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .hit-card:hover {
+      box-shadow: 0 8px 32px -8px rgba(31,26,21,.2);
+      transform: translateY(-2px);
+    }
+    .hit-card.featured {
+      box-shadow: 0 0 0 2px rgba(212,175,100,.5), 0 8px 32px -8px rgba(158,43,31,.2);
+    }
+    .hit-photo {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--cream-deep);
+    }
+    .hit-photo::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 42%;
+      background: linear-gradient(to top, rgba(31,26,21,.34), rgba(31,26,21,0));
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hit-photo svg,
+    .hit-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .3s ease;
+    }
+    .hit-card:hover .hit-photo svg,
+    .hit-card:hover .hit-photo img {
+      transform: scale(1.06);
+    }
+    .hit-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 10;
+      background: #1f1a14;
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .3rem .65rem;
+      border-radius: 999px;
+      display: flex; align-items: center; gap: .35rem;
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 24px -12px rgba(0,0,0,.55);
+      isolation: isolate;
+    }
+    .hit-tag.hot { background: var(--action); }
+    .hit-tag.vegan { background: var(--leaf); color: var(--cream); }
+    .hit-tag.premium { background: #1f1a14; color: var(--saffron); }
+    .hit-tag.side { background: #1f1a14; color: var(--cream); }
+    .tdot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.72);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .hit-tag.hot .tdot { background: rgba(255,255,255,.7); }
+    .hit-tag.vegan .tdot { background: #a8d08d; }
+    .hit-tag.premium .tdot { background: var(--saffron); }
+    .nr1-badge {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: .25rem;
+    }
+    .hit-body {
+      padding: 1rem 1rem .9rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .hit-body h3 {
+      font-family: var(--f-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.2;
+      margin-bottom: .3rem;
+    }
+    .hit-benefit {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: .75rem;
+      line-height: 1.3;
+      flex: 1;
+    }
+    .hit-foot {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-top: .7rem;
+      border-top: 1px solid var(--line);
+    }
+    .hit-foot-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+      margin-bottom: .45rem;
+    }
+    .hit-price {
+      font-family: var(--f-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+    .hit-add {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      background: var(--action);
+      color: var(--cream);
+      border: none;
+      border-radius: 999px;
+      padding: .42rem 1rem;
+      font-size: .82rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .hit-add:hover { background: var(--action-deep); }
+    .upsell-line {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .74rem;
+      color: #7a6f66;
+    }
+    .upsell-line button {
+      background: none; border: none;
+      font-size: .74rem; font-weight: 700;
+      color: #7a6f66; cursor: pointer;
+      padding: 0; transition: color .15s;
+    }
+    .upsell-line button:hover { color: var(--action); }
+    .upsell-price { font-weight: 700; color: var(--action); }
+
+    /* ── Menu sections (simple list) ── */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .menu-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 22px -20px rgba(31,26,21,.18);
+    }
+    .menu-item-info h4 {
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--charcoal);
+      margin-bottom: .2rem;
+    }
+    .menu-item-info p {
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .menu-item .item-price {
+      font-family: var(--f-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .item-tag {
+      display: inline-block;
+      font-size: .6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      padding: .1rem .35rem;
+      border-radius: 3px;
+      margin-left: .35rem;
+      vertical-align: middle;
+    }
+    .item-tag.v { background: var(--leaf); color: #fff; }
+    .item-tag.gf { background: var(--turmeric-deep); color: #fff; }
+    .item-tag.new { background: var(--action); color: #fff; }
+
+    /* ── Build Your Own cards ── */
+    .combo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .combo-card {
+      background: #fff;
+      border-radius: 14px;
+      border: 1.5px solid var(--line);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .combo-card:hover { border-color: var(--action); box-shadow: 0 4px 20px -6px rgba(158,43,31,.15); }
+    .combo-card.hero {
+      border-color: var(--saffron);
+      background: linear-gradient(135deg, #fff 70%, rgba(242,182,72,.06));
+    }
+    .combo-card .combo-name {
+      font-family: var(--f-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+    .combo-card .combo-tagline {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .combo-card .combo-parts-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      margin: .25rem 0;
+    }
+    .combo-part {
+      background: var(--cream-deep);
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--ink);
+      padding: .2rem .6rem;
+    }
+    .combo-card .combo-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: .25rem;
+    }
+    .combo-card .combo-price {
+      font-family: var(--f-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+    .combo-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      background: var(--action);
+      color: var(--cream);
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: .38rem .9rem;
+      border-radius: 999px;
+      transition: background .15s;
+    }
+    .combo-cta-btn:hover { background: var(--action-deep); }
+    .combo-cta-btn.secondary {
+      background: transparent;
+      color: var(--action);
+      border: 1.5px solid var(--action);
+    }
+    .combo-cta-btn.secondary:hover { background: var(--action); color: var(--cream); }
+
+    /* ── Footer (simplified) ── */
+    .site-footer {
+      background: var(--charcoal);
+      color: rgba(246,239,226,.65);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: .82rem;
+      margin-top: 4rem;
+    }
+    .site-footer a { color: var(--saffron); text-decoration: none; }
+
+    /* ── Mobile bar ── */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--charcoal);
+      z-index: 200;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    @media (max-width: 768px) { .mobile-bar { display: flex; } }
+    .mobile-bar a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .2rem;
+      padding: .6rem .5rem;
+      color: rgba(246,239,226,.7);
+      text-decoration: none;
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .mobile-bar a svg { width: 20px; height: 20px; color: var(--saffron); }
+    .mobile-bar a.primary { background: var(--action); }
+    .mobile-bar a.primary svg { color: var(--cream); }
+    .mobile-bar a[aria-current] { color: var(--saffron); }
+
+    /* ════════════════════════════════════
+       ROTI BUILDER — CAVA-style
+    ════════════════════════════════════ */
+    .builder-wrap {
+      background: var(--cream);
+    }
+    .builder-head {
+      margin-bottom: 1.75rem;
+    }
+    .builder-head h2 {
+      font-family: var(--f-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      color: var(--charcoal);
+      line-height: 1.1;
+      margin-bottom: .35rem;
+    }
+    .builder-head h2 em { font-style: italic; color: var(--action); font-weight: 400; }
+    .builder-head p {
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    /* Step tabs */
+    .builder-steps {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--line);
+      margin-bottom: 2rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .builder-steps::-webkit-scrollbar { display: none; }
+    .step-tab {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 1.25rem;
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color .15s, border-color .15s;
+    }
+    .step-tab .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--line);
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      transition: background .15s, color .15s;
+    }
+    .step-tab.active {
+      color: var(--action);
+      border-bottom-color: var(--action);
+    }
+    .step-tab.active .step-num {
+      background: var(--action);
+      color: #fff;
+    }
+    .step-tab.done .step-num {
+      background: var(--leaf);
+      color: #fff;
+    }
+    .step-tab.done .step-num::after {
+      content: '✓';
+    }
+    .step-tab.done .step-label::after {
+      content: '';
+    }
+
+    /* Step panels */
+    .step-panel { display: none; }
+    .step-panel.active { display: block; }
+
+    /* Option grid */
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: .75rem;
+    }
+    @media (max-width: 520px) {
+      .option-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .opt {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .3rem;
+      padding: .9rem 1rem;
+      background: #fff;
+      border-radius: 14px;
+      border: 2px solid var(--line);
+      cursor: pointer;
+      transition: border-color .15s, box-shadow .15s, background .15s;
+      user-select: none;
+      min-height: 72px;
+    }
+    .opt:hover {
+      border-color: rgba(158,43,31,.35);
+      box-shadow: 0 4px 16px -6px rgba(158,43,31,.15);
+    }
+    .opt.selected {
+      border-color: var(--action);
+      background: rgba(158,43,31,.04);
+      box-shadow: 0 0 0 3px rgba(158,43,31,.12);
+    }
+    .opt.recommended::before {
+      content: '⭐';
+      position: absolute;
+      top: .5rem;
+      right: .6rem;
+      font-size: .7rem;
+    }
+    .opt-name {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.2;
+    }
+    .opt-sub {
+      font-size: .72rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .opt-price {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--action);
+    }
+    .opt-tags {
+      display: flex;
+      gap: .3rem;
+      flex-wrap: wrap;
+      margin-top: .1rem;
+    }
+    .opt-tag {
+      font-size: .58rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding: .1rem .35rem;
+      border-radius: 3px;
+    }
+    .opt-tag.v { background: var(--leaf); color: #fff; }
+    .opt-tag.gf { background: var(--turmeric-deep); color: #fff; }
+    .opt-tag.pop { background: var(--saffron); color: var(--charcoal); }
+    .opt-tag.hot { background: var(--action); color: #fff; }
+
+    /* Step nav buttons */
+    .step-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: .75rem;
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+    }
+    .step-nav button {
+      padding: .55rem 1.4rem;
+      border-radius: 999px;
+      font-size: .88rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all .15s;
+    }
+    .btn-prev {
+      background: var(--cream-deep);
+      color: var(--ink);
+    }
+    .btn-prev:hover { background: var(--line); }
+    .btn-next {
+      background: var(--action);
+      color: #fff;
+    }
+    .btn-next:hover { background: var(--action-deep); }
+    .btn-next:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+
+    /* Sticky summary bar */
+    .builder-summary {
+      position: sticky;
+      bottom: 0;
+      left: 0; right: 0;
+      z-index: 80;
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: .9rem 0;
+      margin-top: 2rem;
+      box-shadow: 0 -4px 24px -8px rgba(0,0,0,.35);
+    }
+    @media (max-width: 768px) {
+      /* above mobile-bar */
+      .builder-summary { bottom: 58px; }
+    }
+    .summary-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .summary-selections {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .summary-chip {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      padding: .25rem .7rem;
+      font-size: .75rem;
+      font-weight: 600;
+      color: rgba(246,239,226,.85);
+      white-space: nowrap;
+    }
+    .summary-chip.empty {
+      opacity: .4;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .summary-sep {
+      color: rgba(255,255,255,.3);
+      font-size: .8rem;
+    }
+    .summary-price {
+      font-family: var(--f-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--saffron);
+      white-space: nowrap;
+    }
+    .summary-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--action);
+      color: #fff;
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 700;
+      padding: .6rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .15s;
+    }
+    .summary-cta:hover { background: #7A1D14; }
+  </style>
+</head>
+<body>
+
+<!-- Trust bar -->
+<div class="trust-bar">
+  <span class="pip">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.4h7.6z"/></svg>
+    <strong>4.6★</strong> · 28,000+ reviews
+  </span>
+  <span class="pip hide-mobile">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    Pickup in <strong>~15 min</strong>
+  </span>
+  <span class="pip hide-mobile"><strong>6 stores</strong> open past midnight</span>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="nav-row">
+      <a href="/" class="brand-logo" aria-label="My Roti Place — Home">
+        <img src="assets/mrp-logo.png" alt="My Roti Place logo" height="38">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/menu.html" aria-current="page">Menu</a></li>
+        <li><a href="/locations.html">Locations</a></li>
+        <li><a href="/late-night.html">Late Night</a></li>
+        <li><a href="/catering.html">Catering</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/locations.html" class="btn-find">Find Store</a>
+        <a href="https://ordermyroti.com" class="btn-action">Order Pickup <span>→</span></a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page intro -->
+<div class="menu-intro">
+  <div class="container">
+    <h1>Pick your <em>hit.</em></h1>
+    <p>Toronto's most-ordered roti wraps, biryanis, and late-night favourites — fresh off the tawa.</p>
+  </div>
+</div>
+
+<!-- Filter chips -->
+<div class="menu-chips">
+  <div class="container">
+    <a href="/#hits" class="chip hot">🔥 Best Sellers</a>
+    <a href="#build-your-own" class="chip">Build Your Own</a>
+    <a href="/index.html#combos" class="chip" style="background:var(--action);color:var(--cream);border-color:var(--action);">Pre-built Combos</a>
+    <a href="#biryani" class="chip">Biryani</a>
+    <a href="#apps" class="chip">Apps &amp; Hits</a>
+    <a href="#vegan" class="chip">Vegan</a>
+    <a href="#signature-rotis" class="chip">Signature Rotis</a>
+    <a href="#sides" class="chip">Sides</a>
+    <a href="#desserts" class="chip">Dessert</a>
+    <a href="#drinks" class="chip">Drinks</a>
+  </div>
+</div>
+
+<!-- ===== BEST SELLERS (homepage Hits 4-card grid) ===== -->
+<section class="section-block" id="best-sellers">
+  <div class="container">
+    <div class="section-label">
+      <h2>Start with a <em>hit.</em></h2>
+      <span class="eyebrow-tag">Top ordered this week</span>
+    </div>
+    <div class="hits-grid">
+
+      <!-- Butter Chicken Roti -->
+      <article class="hit-card featured">
+        <div class="hit-photo">
+          <span class="hit-tag hot"><span class="tdot"></span>Most Ordered</span>
+          <img src="assets/butter-chicken-roti.jpg" alt="Butter Chicken Roti" loading="lazy">
+        </div>
+        <div class="hit-body">
+          <span class="nr1-badge">#1 Ordered in Toronto</span>
+          <h3>Butter Chicken Roti</h3>
+          <p class="hit-benefit">✓ Creamy. Smoky. Wrapped fresh.</p>
+          <div class="hit-foot">
+            <div class="hit-foot-row">
+              <span class="hit-price">$15.49</span>
+              <a href="https://ordermyroti.com" class="hit-add">Add →</a>
+            </div>
+            <div class="upsell-line">
+              <button type="button">+ Mango Lassi</button>
+              <span class="upsell-price">+$3</span>
+              <span>· customers love this</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Chicken Dum Biryani -->
+      <article class="hit-card">
+        <div class="hit-photo">
+          <span class="hit-tag"><span class="tdot"></span>Safe Choice</span>
+          <img src="assets/chicken-biryani.jpg" alt="Chicken Dum Biryani" loading="lazy">
+        </div>
+        <div class="hit-body">
+          <h3>Chicken Dum Biryani</h3>
+          <p class="hit-benefit">✓ Loaded. Filling. Worth every bite.</p>
+          <div class="hit-foot">
+            <div class="hit-foot-row">
+              <span class="hit-price">$16.49</span>
+              <a href="https://ordermyroti.com" class="hit-add">Add →</a>
+            </div>
+            <div class="upsell-line">
+              <button type="button">+ Butter roti</button>
+              <span class="upsell-price">+$2</span>
+              <span>· completes the meal</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Chole Chawal -->
+      <article class="hit-card">
+        <div class="hit-photo">
+          <span class="hit-tag" style="background:var(--leaf);"><span class="tdot" style="background:#a8d08d;"></span>Vegan Favourite</span>
+          <img src="assets/chole-chawal.jpg" alt="Chole Chawal" loading="lazy">
+        </div>
+        <div class="hit-body">
+          <h3>Chole Chawal</h3>
+          <p class="hit-benefit">✓ Clean. Protein-packed. Comfort meal.</p>
+          <div class="hit-foot">
+            <div class="hit-foot-row">
+              <span class="hit-price">$9.99</span>
+              <a href="https://ordermyroti.com" class="hit-add">Add →</a>
+            </div>
+            <div class="upsell-line">
+              <button type="button">+ Butter roti</button>
+              <span class="upsell-price">+$2</span>
+              <span>· pairs perfectly</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Butter Chicken Poutine -->
+      <article class="hit-card">
+        <div class="hit-photo">
+          <span class="hit-tag"><span class="tdot"></span>Late Night Pick</span>
+          <img src="assets/butter-chicken-poutine.jpg" alt="Butter Chicken Poutine" loading="lazy">
+        </div>
+        <div class="hit-body">
+          <h3>Butter Chicken Poutine</h3>
+          <p class="hit-benefit">✓ Cheesy. Saucy. Late-night hit.</p>
+          <div class="hit-foot">
+            <div class="hit-foot-row">
+              <span class="hit-price">$12.99</span>
+              <a href="https://ordermyroti.com" class="hit-add">Add →</a>
+            </div>
+            <div class="upsell-line">
+              <button type="button">+ Mango Lassi</button>
+              <span class="upsell-price">+$3</span>
+              <span>· balance the heat</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUILD YOUR OWN — CAVA-style builder ===== -->
+<section class="section-block builder-wrap" id="build-your-own">
+  <div class="container">
+
+    <div class="builder-head">
+      <h2>Build Your Own <em>Roti.</em></h2>
+      <p class="builder-head" style="margin-top:.25rem;font-size:.85rem;color:var(--muted);">Want a pre-built combo? <a href="/index.html#combos" style="color:var(--action);font-weight:700;">Browse combos →</a></p>
+      <p>Pick a base, protein, curry, and spice level.</p>
+    </div>
+
+    <!-- Step tabs -->
+    <div class="builder-steps" role="tablist">
+      <button class="step-tab active" data-step="0" role="tab">
+        <span class="step-num">1</span>
+        <span class="step-label">Base</span>
+      </button>
+      <button class="step-tab" data-step="1" role="tab">
+        <span class="step-num">2</span>
+        <span class="step-label">Protein</span>
+      </button>
+      <button class="step-tab" data-step="2" role="tab">
+        <span class="step-num">3</span>
+        <span class="step-label">Curry</span>
+      </button>
+      <button class="step-tab" data-step="3" role="tab">
+        <span class="step-num">4</span>
+        <span class="step-label">Spice</span>
+      </button>
+    </div>
+
+    <!-- Step 1: Base -->
+    <div class="step-panel active" data-panel="0">
+      <div class="option-grid">
+        <div class="opt recommended selected" data-step="0" data-name="Classic Roti" data-price="0">
+          <span class="opt-name">Classic Roti</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag pop">Popular</span></div>
+        </div>
+        <div class="opt" data-step="0" data-name="Turmeric Roti" data-price="1">
+          <span class="opt-name">Turmeric Roti</span>
+          <span class="opt-price">+$1</span>
+        </div>
+        <div class="opt" data-step="0" data-name="Kale Roti" data-price="1">
+          <span class="opt-name">Kale Roti</span>
+          <span class="opt-price">+$1</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span></div>
+        </div>
+        <div class="opt" data-step="0" data-name="Basmati Rice" data-price="0">
+          <span class="opt-name">Basmati Rice</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span><span class="opt-tag gf">GF</span></div>
+        </div>
+        <div class="opt" data-step="0" data-name="Green Salad" data-price="0">
+          <span class="opt-name">Green Salad</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span><span class="opt-tag gf">GF</span></div>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-next" data-next="1">Next: Protein →</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Protein -->
+    <div class="step-panel" data-panel="1">
+      <div class="option-grid">
+        <div class="opt recommended" data-step="1" data-name="Chicken" data-price="15.99">
+          <span class="opt-name">Chicken</span>
+          <span class="opt-price">$15.99</span>
+          <div class="opt-tags"><span class="opt-tag pop">Popular</span></div>
+        </div>
+        <div class="opt" data-step="1" data-name="Lamb" data-price="16.99">
+          <span class="opt-name">Lamb</span>
+          <span class="opt-price">$16.99</span>
+        </div>
+        <div class="opt" data-step="1" data-name="Paneer" data-price="14.99">
+          <span class="opt-name">Paneer</span>
+          <span class="opt-price">$14.99</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span></div>
+        </div>
+        <div class="opt" data-step="1" data-name="Fish" data-price="14.99">
+          <span class="opt-name">Fish</span>
+          <span class="opt-price">$14.99</span>
+        </div>
+        <div class="opt" data-step="1" data-name="Shrimp" data-price="16.99">
+          <span class="opt-name">Shrimp</span>
+          <span class="opt-price">$16.99</span>
+        </div>
+        <div class="opt" data-step="1" data-name="Cheese Balls" data-price="14.99">
+          <span class="opt-name">Cheese Balls</span>
+          <span class="opt-price">$14.99</span>
+        </div>
+        <div class="opt" data-step="1" data-name="Tofu" data-price="13.99">
+          <span class="opt-name">Tofu</span>
+          <span class="opt-price">$13.99</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span></div>
+        </div>
+        <div class="opt" data-step="1" data-name="Veggies" data-price="13.99">
+          <span class="opt-name">Veggies</span>
+          <span class="opt-price">$13.99</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span></div>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-prev" data-prev="0">← Back</button>
+        <button class="btn-next" data-next="2">Next: Curry →</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Curry -->
+    <div class="step-panel" data-panel="2">
+      <div class="option-grid">
+        <div class="opt recommended" data-step="2" data-name="Butter Masala" data-price="0">
+          <span class="opt-name">Butter Masala</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag pop">Popular</span></div>
+        </div>
+        <div class="opt" data-step="2" data-name="Mom's Classic" data-price="0">
+          <span class="opt-name">Mom's Classic</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span><span class="opt-tag gf">GF</span></div>
+        </div>
+        <div class="opt" data-step="2" data-name="Creamy Korma" data-price="0">
+          <span class="opt-name">Creamy Korma</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag gf">GF</span></div>
+        </div>
+        <div class="opt" data-step="2" data-name="Green Spinach" data-price="0">
+          <span class="opt-name">Green Spinach</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag gf">GF</span></div>
+        </div>
+        <div class="opt" data-step="2" data-name="Hakka Chilli" data-price="0">
+          <span class="opt-name">Hakka Chilli</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag gf">GF</span></div>
+        </div>
+        <div class="opt" data-step="2" data-name="Vindaloo 🔥" data-price="0">
+          <span class="opt-name">Vindaloo 🔥</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span><span class="opt-tag gf">GF</span></div>
+        </div>
+        <div class="opt" data-step="2" data-name="Mango Coconut" data-price="0">
+          <span class="opt-name">Mango Coconut</span>
+          <span class="opt-price">Included</span>
+          <div class="opt-tags"><span class="opt-tag v">Vegan</span><span class="opt-tag gf">GF</span></div>
+        </div>
+        <div class="opt" data-step="2" data-name="Agni Challenge 🔥🔥🔥" data-price="2">
+          <span class="opt-name">Agni Challenge 🔥🔥🔥</span>
+          <span class="opt-price">+$2</span>
+          <div class="opt-tags"><span class="opt-tag hot">Extreme</span></div>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-prev" data-prev="1">← Back</button>
+        <button class="btn-next" data-next="3">Next: Spice →</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Spice -->
+    <div class="step-panel" data-panel="3">
+      <div class="option-grid">
+        <div class="opt" data-step="3" data-name="Mild" data-price="0">
+          <span class="opt-name">Mild</span>
+          <span class="opt-sub">Smooth, no heat</span>
+        </div>
+        <div class="opt recommended" data-step="3" data-name="Medium" data-price="0">
+          <span class="opt-name">Medium</span>
+          <span class="opt-sub">Balanced kick</span>
+          <div class="opt-tags"><span class="opt-tag pop">Popular</span></div>
+        </div>
+        <div class="opt" data-step="3" data-name="Spicy" data-price="0">
+          <span class="opt-name">Spicy</span>
+          <span class="opt-sub">You know what you want</span>
+        </div>
+        <div class="opt" data-step="3" data-name="Stupid Spicy 🔥" data-price="0">
+          <span class="opt-name">Stupid Spicy 🔥</span>
+          <span class="opt-sub">No refunds</span>
+          <div class="opt-tags"><span class="opt-tag hot">Danger</span></div>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-prev" data-prev="2">← Back</button>
+        <a href="https://ordermyroti.com" class="btn-next" id="builder-order-btn" style="text-decoration:none;">Build Yours Now →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sticky summary bar -->
+  <div class="builder-summary" id="builder-summary">
+    <div class="container">
+      <div class="summary-inner">
+        <div class="summary-selections" id="summary-chips">
+          <span class="summary-chip" id="sum-0">Choose base…</span>
+          <span class="summary-sep">+</span>
+          <span class="summary-chip empty" id="sum-1">Protein</span>
+          <span class="summary-sep">+</span>
+          <span class="summary-chip empty" id="sum-2">Curry</span>
+          <span class="summary-sep">+</span>
+          <span class="summary-chip empty" id="sum-3">Spice</span>
+        </div>
+        <span class="summary-price" id="summary-price">from $13.99</span>
+        <a href="https://ordermyroti.com" class="summary-cta">Build Yours Now →</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+(function () {
+  /* ── State ── */
+  var sel = [null, null, null, null];
+  var BASE_PRICE = 0;
+  var STEP_LABELS = ['base', 'protein', 'curry', 'spice'];
+
+  /* ── Option click ── */
+  document.querySelectorAll('.opt[data-step]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var step = parseInt(el.dataset.step);
+      /* deselect siblings */
+      document.querySelectorAll('.opt[data-step="' + step + '"]').forEach(function (s) {
+        s.classList.remove('selected');
+      });
+      el.classList.add('selected');
+      sel[step] = { name: el.dataset.name, price: parseFloat(el.dataset.price) || 0 };
+      updateSummary();
+      /* auto-advance on spice pick */
+      if (step === 3) updateOrderBtn();
+    });
+  });
+
+  /* ── Step tab click ── */
+  document.querySelectorAll('.step-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      goToStep(parseInt(tab.dataset.step));
+    });
+  });
+
+  /* ── Next/Prev buttons ── */
+  document.querySelectorAll('.btn-next[data-next]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      goToStep(parseInt(btn.dataset.next));
+    });
+  });
+  document.querySelectorAll('.btn-prev[data-prev]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      goToStep(parseInt(btn.dataset.prev));
+    });
+  });
+
+  function goToStep(n) {
+    document.querySelectorAll('.step-panel').forEach(function (p) { p.classList.remove('active'); });
+    document.querySelectorAll('.step-tab').forEach(function (t, i) {
+      t.classList.remove('active');
+      if (sel[i]) t.classList.add('done'); else t.classList.remove('done');
+    });
+    document.querySelector('.step-panel[data-panel="' + n + '"]').classList.add('active');
+    var activeTab = document.querySelector('.step-tab[data-step="' + n + '"]');
+    activeTab.classList.add('active');
+    activeTab.classList.remove('done');
+    /* scroll builder into view on mobile */
+    document.getElementById('build-your-own').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function updateSummary() {
+    var chips = ['sum-0','sum-1','sum-2','sum-3'];
+    var placeholders = ['Choose base…', 'Protein', 'Curry', 'Spice'];
+    var total = 0;
+    chips.forEach(function (id, i) {
+      var chip = document.getElementById(id);
+      if (sel[i]) {
+        chip.textContent = sel[i].name;
+        chip.classList.remove('empty');
+        if (i > 0) total += sel[i].price; else BASE_PRICE = 0;
+        if (i === 1) total = sel[1].price; /* protein sets base price */
+      } else {
+        chip.textContent = placeholders[i];
+        chip.classList.add('empty');
+      }
+    });
+    /* price = protein price + base addon + curry addon */
+    var price = 0;
+    if (sel[1]) price = sel[1].price;
+    if (sel[0]) price += sel[0].price;
+    if (sel[2]) price += sel[2].price;
+    var priceEl = document.getElementById('summary-price');
+    priceEl.textContent = price > 0 ? '$' + price.toFixed(2) : 'from $13.99';
+  }
+
+  function updateOrderBtn() {}
+
+  /* init: pre-select Classic Roti */
+  updateSummary();
+})();
+</script>
+
+<!-- ===== BIRYANI ===== -->
+<section class="section-block" id="biryani">
+  <div class="container">
+    <div class="section-label"><h2><em>Biryani.</em></h2></div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Chicken Dum Biryani</h4>
+          <p>Saffron basmati, slow-cooked dum style. Raita &amp; gulab jamun included.</p>
+        </div>
+        <div class="item-price">$16.49</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Lamb Biryani</h4>
+          <p>Tender slow-cooked lamb. Bold spices, dum-sealed.</p>
+        </div>
+        <div class="item-price">$17.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Veg Biryani <span class="item-tag v">V</span></h4>
+          <p>Seasonal vegetables, fragrant basmati, dum style.</p>
+        </div>
+        <div class="item-price">$13.99</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPS & HITS ===== -->
+<section class="section-block" id="apps">
+  <div class="container">
+    <div class="section-label"><h2>Apps &amp; <em>Hits.</em></h2></div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Butter Chicken Poutine</h4>
+          <p>Crispy fries buried in makhani sauce and melted cheese.</p>
+        </div>
+        <div class="item-price">$12.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Pani Puri (6 pcs)</h4>
+          <p>Crispy shells, tangy tamarind water, spiced potato.</p>
+        </div>
+        <div class="item-price">$7.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Samosa (2 pcs)</h4>
+          <p>Golden pastry, spiced potato &amp; pea filling.</p>
+        </div>
+        <div class="item-price">$5.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Masala Fries</h4>
+          <p>Crispy fries tossed in house masala blend.</p>
+        </div>
+        <div class="item-price">$5.49</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VEGAN ===== -->
+<section class="section-block" id="vegan">
+  <div class="container">
+    <div class="section-label"><h2><em>Vegan</em> picks.</h2></div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Chole Chawal <span class="item-tag v">V</span></h4>
+          <p>Bold North Indian chickpea curry on basmati rice.</p>
+        </div>
+        <div class="item-price">$9.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Dal Makhani Roti <span class="item-tag v">V</span></h4>
+          <p>Creamy black lentil dal in a fresh roti wrap.</p>
+        </div>
+        <div class="item-price">$11.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Honey Garlic Cauliflower <span class="item-tag v">V</span></h4>
+          <p>Crispy roasted cauliflower, sticky honey garlic glaze.</p>
+        </div>
+        <div class="item-price">$10.49</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIGNATURE ROTIS ===== -->
+<section class="section-block" id="signature-rotis">
+  <div class="container">
+    <div class="section-label"><h2>Signature <em>Rotis.</em></h2></div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Butter Chicken Roti</h4>
+          <p>Slow-simmered butter chicken in a fresh-made roti.</p>
+        </div>
+        <div class="item-price">$15.49</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Lamb Seekh Roti</h4>
+          <p>Smoky seekh kebab, mint chutney, caramelized onion.</p>
+        </div>
+        <div class="item-price">$16.49</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Paneer Tikka Roti <span class="item-tag v">V</span></h4>
+          <p>Charred paneer tikka, roasted peppers, green chutney.</p>
+        </div>
+        <div class="item-price">$13.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h4>Chicken Tikka Roti</h4>
+          <p>Tandoor-style chicken tikka, fresh veggies, raita.</p>
+        </div>
+        <div class="item-price">$14.99</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIDES ===== -->
+<section class="section-block" id="sides">
+  <div class="container">
+    <div class="section-label"><h2>Sides.</h2></div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Raita</h4><p>Cool yogurt, cucumber, fresh herbs.</p></div>
+        <div class="item-price">$2.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Plain Butter Roti</h4><p>Fresh-made, brushed with butter.</p></div>
+        <div class="item-price">$2.49</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Masala Fries</h4><p>Crispy fries, house masala blend.</p></div>
+        <div class="item-price">$5.49</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Papadum (3 pcs)</h4><p>Thin crispy lentil crackers.</p></div>
+        <div class="item-price">$2.99</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DESSERTS ===== -->
+<section class="section-block" id="desserts">
+  <div class="container">
+    <div class="section-label"><h2>Dessert.</h2></div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Gulab Jamun (2 pcs)</h4><p>Milk-solid dumplings in rose syrup.</p></div>
+        <div class="item-price">$4.49</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Kheer</h4><p>Cardamom rice pudding, topped with pistachios.</p></div>
+        <div class="item-price">$4.99</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DRINKS ===== -->
+<section class="section-block" id="drinks">
+  <div class="container">
+    <div class="section-label"><h2>Drinks.</h2></div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Mango Lassi</h4><p>Thick, sweet, fresh mango.</p></div>
+        <div class="item-price">$3.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Rose Lassi</h4><p>Creamy yogurt drink with rose water.</p></div>
+        <div class="item-price">$3.99</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Masala Chai</h4><p>Brewed with ginger, cardamom, cinnamon.</p></div>
+        <div class="item-price">$3.49</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info"><h4>Nimbu Pani</h4><p>Fresh lime soda, black salt, mint.</p></div>
+        <div class="item-price">$3.49</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>© 2024 My Roti Place · Fresh on the tawa since 2018 · <a href="https://ordermyroti.com">Order Online</a></p>
+</footer>
+
+<!-- Mobile bottom bar -->
+<nav class="mobile-bar" aria-label="Quick actions">
+  <a href="https://ordermyroti.com" class="primary">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    Pickup
+  </a>
+  <a href="https://ordermyroti.com">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V6h10l4 4h4v7h-2M13 6v4h6"/></svg>
+    Delivery
+  </a>
+  <a href="/locations.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Stores
+  </a>
+  <a href="/menu.html" aria-current="page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+    Menu
+  </a>
+</nav>
+
+<script src="scripts/menu-data-renderer.js"></script>
+<script src="scripts/cart-preview.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="scripts/supabase-client.js"></script>
+
+</body>
+</html>

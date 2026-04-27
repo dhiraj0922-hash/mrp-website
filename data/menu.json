@@ -1,0 +1,963 @@
+{
+  "categories": [
+    "Popular",
+    "Combos",
+    "Signature Rotis",
+    "Build Your Own Roti",
+    "Biryani",
+    "Apps & Hits",
+    "Vegan Picks",
+    "Sides",
+    "Desserts & Drinks"
+  ],
+  "views": {
+    "homepage": {
+      "popular": [
+        "butter-chicken-roti",
+        "chicken-dum-biryani",
+        "chole-chawal",
+        "butter-chicken-poutine"
+      ],
+      "popularFilterCounts": {
+        "all": 8,
+        "first-time": 3,
+        "late-night": 4,
+        "vegan": 3,
+        "spicy": 2
+      },
+      "combos": [
+        "comfort-combo",
+        "kk-classic",
+        "ninety-second-biryani",
+        "vegan-hero",
+        "spice-seeker",
+        "family-feast"
+      ],
+      "signature-rotis": [
+        "butter-chicken-roti",
+        "chicken-tikka-roti",
+        "paneer-tikka-roti",
+        "lamb-vindaloo-roti"
+      ],
+      "biryani": [
+        "chicken-dum-biryani",
+        "hyderabadi-dum-biryani",
+        "lamb-biryani"
+      ],
+      "apps-hits": [
+        "butter-chicken-poutine",
+        "honey-garlic-cauliflower",
+        "pani-puri",
+        "samosa-2pc"
+      ],
+      "vegan-picks": [
+        "chole-chawal",
+        "honey-garlic-cauliflower",
+        "hakka-chilli-tofu-bowl"
+      ],
+      "sides": [
+        "plain-butter-roti",
+        "raita",
+        "mango-chutney",
+        "masala-fries"
+      ],
+      "desserts-drinks": [
+        "mango-lassi",
+        "gulab-jamun",
+        "masala-chai",
+        "rose-lassi"
+      ],
+      "lateNightCombos": [
+        "two-am-pack"
+      ]
+    },
+    "menuPage": {
+      "best-sellers": [
+        "butter-chicken-roti",
+        "chicken-dum-biryani",
+        "chole-chawal",
+        "butter-chicken-poutine"
+      ],
+      "biryani": [
+        "chicken-dum-biryani",
+        "lamb-biryani",
+        "veg-biryani"
+      ],
+      "apps": [
+        "butter-chicken-poutine",
+        "pani-puri",
+        "samosa-2pc",
+        "masala-fries"
+      ],
+      "vegan": [
+        "chole-chawal",
+        "dal-makhani-roti",
+        "honey-garlic-cauliflower"
+      ],
+      "signature-rotis": [
+        "butter-chicken-roti",
+        "lamb-vindaloo-roti",
+        "paneer-tikka-roti",
+        "chicken-tikka-roti"
+      ],
+      "sides": [
+        "raita",
+        "plain-butter-roti",
+        "masala-fries",
+        "mango-chutney"
+      ],
+      "desserts": [
+        "gulab-jamun",
+        "kheer"
+      ],
+      "drinks": [
+        "mango-lassi",
+        "rose-lassi",
+        "masala-chai",
+        "nimbu-pani"
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "butter-chicken-roti",
+      "kind": "menu",
+      "name": "Butter Chicken Roti",
+      "category": "Signature Rotis",
+      "description": "Slow-simmered butter chicken in a fresh-made roti.",
+      "homepageDescription": "Creamy. Smoky. Wrapped fresh.",
+      "sectionDescription": "Rich, creamy, and wrapped fresh every time.",
+      "price": 16.99,
+      "image": "assets/butter-chicken-roti.jpg",
+      "badges": [
+        "Most Ordered Today",
+        "#1 Ordered in Toronto"
+      ],
+      "badgeTone": "most-ordered",
+      "dietaryTags": [],
+      "upsellText": "+ Mango Lassi +$3 · customers love this",
+      "upsellLabel": "+ Mango Lassi",
+      "upsellPrice": 3,
+      "upsellNote": "customers love this",
+      "addUpsellPrompt": "Pair it with a Mango Lassi!",
+      "available": true,
+      "filters": [
+        "all",
+        "first-time"
+      ],
+      "heatLabel": "Mild",
+      "heatLevel": 2,
+      "menuPageDescription": "Slow-simmered butter chicken in a fresh-made roti.",
+      "menuPageTag": null
+    },
+    {
+      "id": "chicken-dum-biryani",
+      "kind": "menu",
+      "name": "Chicken Dum Biryani",
+      "category": "Biryani",
+      "description": "Saffron basmati, slow-cooked dum style. Raita and gulab jamun included.",
+      "homepageDescription": "Loaded. Filling. Worth every bite.",
+      "sectionDescription": "Sealed, fragrant, and loaded with tender chicken.",
+      "price": 16.49,
+      "image": "assets/chicken-biryani.jpg",
+      "badges": [
+        "Safe Choice"
+      ],
+      "badgeTone": "safe",
+      "dietaryTags": [],
+      "upsellText": "+ Butter roti +$2 · completes the meal",
+      "upsellLabel": "+ Butter roti",
+      "upsellPrice": 2,
+      "upsellNote": "completes the meal",
+      "addUpsellPrompt": "Grab a butter roti to go with it!",
+      "available": true,
+      "filters": [
+        "all",
+        "first-time"
+      ],
+      "heatLabel": "Medium",
+      "heatLevel": 3,
+      "menuPageDescription": "Saffron basmati, slow-cooked dum style. Raita & gulab jamun included.",
+      "menuPageTag": null
+    },
+    {
+      "id": "chole-chawal",
+      "kind": "menu",
+      "name": "Chole Chawal",
+      "category": "Vegan Picks",
+      "description": "Bold North Indian chickpea curry on basmati rice.",
+      "homepageDescription": "Clean. Protein-packed. Comfort meal.",
+      "sectionDescription": "Protein-packed comfort with clean spice.",
+      "price": 11.99,
+      "image": "assets/chole-chawal.jpg",
+      "badges": [
+        "Vegan Favorite"
+      ],
+      "badgeTone": "vegan",
+      "dietaryTags": [
+        "vegan"
+      ],
+      "upsellText": "+ Butter roti +$2 · pairs perfectly",
+      "upsellLabel": "+ Butter roti",
+      "upsellPrice": 2,
+      "upsellNote": "pairs perfectly",
+      "addUpsellPrompt": "Add a roti — perfect with chole!",
+      "available": true,
+      "filters": [
+        "all",
+        "vegan"
+      ],
+      "heatLabel": "Mild",
+      "heatLevel": 2,
+      "menuPageDescription": "Bold North Indian chickpea curry on basmati rice.",
+      "menuPageTag": "V"
+    },
+    {
+      "id": "butter-chicken-poutine",
+      "kind": "menu",
+      "name": "Butter Chicken Poutine",
+      "category": "Apps & Hits",
+      "description": "Crispy fries buried in makhani sauce and melted cheese.",
+      "homepageDescription": "Cheesy. Saucy. Late-night hit.",
+      "sectionDescription": "Cheesy, saucy, and impossible to ignore.",
+      "price": 16.99,
+      "image": "assets/butter-chicken-poutine.jpg",
+      "badges": [
+        "Late Night Pick"
+      ],
+      "badgeTone": "late-night",
+      "dietaryTags": [],
+      "upsellText": "+ Mango Lassi +$3 · balance the heat",
+      "upsellLabel": "+ Mango Lassi",
+      "upsellPrice": 3,
+      "upsellNote": "balance the heat",
+      "addUpsellPrompt": "Cool it down with a Mango Lassi!",
+      "available": true,
+      "filters": [
+        "all",
+        "late-night"
+      ],
+      "heatLabel": "Mild",
+      "heatLevel": 2,
+      "menuPageDescription": "Crispy fries buried in makhani sauce and melted cheese.",
+      "menuPageTag": null
+    },
+    {
+      "id": "chicken-tikka-roti",
+      "kind": "menu",
+      "name": "Chicken Tikka Roti",
+      "category": "Signature Rotis",
+      "description": "Tandoor-style chicken tikka, fresh veggies, raita.",
+      "homepageDescription": "Charred tikka flavor with cooling chutneys.",
+      "sectionDescription": "Charred tikka flavor with cooling chutneys.",
+      "price": 16.99,
+      "image": "assets/chicken-tikka-roti.png",
+      "artKey": "chicken-tikka-roti",
+      "badges": [
+        "Safe Choice"
+      ],
+      "badgeTone": "safe",
+      "dietaryTags": [],
+      "upsellText": "+ Masala Fries +$5 · make it a meal",
+      "upsellLabel": "+ Masala Fries",
+      "upsellPrice": 5,
+      "upsellNote": "make it a meal",
+      "available": true,
+      "filters": [
+        "first-time"
+      ],
+      "menuPageDescription": "Tandoor-style chicken tikka, fresh veggies, raita.",
+      "menuPageTag": null
+    },
+    {
+      "id": "paneer-tikka-roti",
+      "kind": "menu",
+      "name": "Paneer Tikka Roti",
+      "category": "Signature Rotis",
+      "description": "Charred paneer tikka, roasted peppers, green chutney.",
+      "homepageDescription": "Smoky paneer, peppers, and mint chutney.",
+      "sectionDescription": "Smoky paneer, peppers, and mint chutney.",
+      "price": 15.99,
+      "image": "assets/paneer-tikka-roti.png",
+      "artKey": "paneer-tikka-roti",
+      "badges": [
+        "Veg Favorite"
+      ],
+      "badgeTone": "vegan",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Gulab Jamun +$4 · sweet finish",
+      "upsellLabel": "+ Gulab Jamun",
+      "upsellPrice": 4,
+      "upsellNote": "sweet finish",
+      "available": true,
+      "filters": [],
+      "menuPageDescription": "Charred paneer tikka, roasted peppers, green chutney.",
+      "menuPageTag": "V"
+    },
+    {
+      "id": "lamb-vindaloo-roti",
+      "kind": "menu",
+      "name": "Lamb Vindaloo Roti",
+      "category": "Signature Rotis",
+      "description": "Smoky seekh kebab, mint chutney, caramelized onion.",
+      "homepageDescription": "Smoky kebab richness with a sharper kick.",
+      "sectionDescription": "Smoky kebab richness with a sharper kick.",
+      "price": 17.99,
+      "image": "assets/lamb-vindaloo-roti.png",
+      "artKey": "lamb-vindaloo-roti",
+      "badges": [
+        "Bring Heat"
+      ],
+      "badgeTone": "late-night",
+      "dietaryTags": [],
+      "upsellText": "+ Masala Chai +$3 · crowd surprise",
+      "upsellLabel": "+ Masala Chai",
+      "upsellPrice": 3,
+      "upsellNote": "crowd surprise",
+      "available": true,
+      "filters": [
+        "spicy"
+      ],
+      "menuPageDescription": "juicy lamb, caramelized onion.",
+      "menuPageTag": null
+    },
+    {
+      "id": "build-your-own-roti",
+      "kind": "build",
+      "name": "Build Your Own Roti",
+      "category": "Build Your Own Roti",
+      "description": "Pick a base, protein, curry, and spice level.",
+      "price": 13.99,
+      "image": "",
+      "badges": [
+        "Customizable"
+      ],
+      "dietaryTags": [],
+      "upsellText": "Build in four quick steps",
+      "available": true
+    },
+    {
+      "id": "baby-goat-dum-biryani",
+      "kind": "menu",
+      "name": "Baby Goat Dum Biryani",
+      "category": "Biryani",
+      "description": "Deeper spice, richer aroma, longer finish.",
+      "price": 17.99,
+      "image": "assets/baby-goat-dum-biryani.png",
+      "artKey": "baby-goat-dum-biryani",
+      "badges": [
+        "Premium Pick"
+      ],
+      "badgeTone": "late-night",
+      "dietaryTags": [],
+      "upsellText": "+ Butter roti +$2 · goes with everything",
+      "upsellLabel": "+ Butter roti",
+      "upsellPrice": 2,
+      "upsellNote": "goes with everything",
+      "available": true,
+      "filters": [
+        "late-night",
+        "spicy"
+      ]
+    },
+    {
+      "id": "lamb-biryani",
+      "kind": "menu",
+      "name": "Lamb Biryani",
+      "category": "Biryani",
+      "description": "Tender slow-cooked lamb. Bold spices, dum-sealed.",
+      "homepageDescription": "Slow-cooked lamb and bold spice depth.",
+      "price": 16.99,
+      "image": "assets/Lamb-Biryani.png",
+      "artKey": "lamb-biryani",
+      "badges": [
+        "Premium Pick"
+      ],
+      "badgeTone": "premium",
+      "dietaryTags": [],
+      "upsellText": "+ Gulab Jamun +$4 · sweet contrast",
+      "upsellLabel": "+ Gulab Jamun",
+      "upsellPrice": 4,
+      "upsellNote": "sweet contrast",
+      "available": true,
+      "filters": []
+    },
+    {
+      "id": "veg-biryani",
+      "kind": "menu",
+      "name": "Veg Biryani",
+      "category": "Biryani",
+      "description": "Seasonal vegetables, fragrant basmati, dum style.",
+      "price": 13.99,
+      "image": "assets/Vegetable-dum-biryani.png",
+      "badges": [
+        "Veg"
+      ],
+      "badgeTone": "vegan",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Raita +$3 · cool finish",
+      "available": true,
+      "menuPageTag": "V"
+    },
+    {
+      "id": "pani-puri",
+      "kind": "menu",
+      "name": "Pani Puri",
+      "category": "Apps & Hits",
+      "description": "Crispy shells, tangy tamarind water, spiced potato.",
+      "homepageDescription": "Crunchy, tangy, and fast-shareable.",
+      "price": 7.99,
+      "image": "assets/Pani-puri.png",
+      "artKey": "pani-puri",
+      "badges": [
+        "Street Favorite"
+      ],
+      "badgeTone": "default",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Samosa +$6 · shareable pair",
+      "upsellLabel": "+ Samosa",
+      "upsellPrice": 6,
+      "upsellNote": "shareable pair",
+      "available": true,
+      "filters": []
+    },
+    {
+      "id": "samosa-2pc",
+      "kind": "menu",
+      "name": "Samosa (2 pcs)",
+      "category": "Apps & Hits",
+      "description": "Golden pastry, spiced potato and pea filling.",
+      "homepageDescription": "Crisp pastry and classic potato filling.",
+      "price": 5.99,
+      "image": "assets/samosa.png",
+      "artKey": "samosa-2pc",
+      "badges": [
+        "Snack Add-On"
+      ],
+      "badgeTone": "default",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Masala Chai +$3 · easy yes",
+      "upsellLabel": "+ Masala Chai",
+      "upsellPrice": 3,
+      "upsellNote": "easy yes",
+      "available": true,
+      "filters": []
+    },
+    {
+      "id": "honey-garlic-cauliflower",
+      "kind": "menu",
+      "name": "Honey Garlic Cauliflower",
+      "category": "Veggie Picks",
+      "description": "Crispy roasted cauliflower, sticky honey garlic glaze.",
+      "homepageDescription": "Crispy, sticky, and strong on repeat orders.",
+      "sectionDescription": "Sticky, crispy, and great for sharing.",
+      "price": 10.49,
+      "image": "assets/honey-garlic-cauliflower.png",
+      "badges": [
+        "Veg Favorite"
+      ],
+      "badgeTone": "vegan",
+      "dietaryTags": [
+        "vegan"
+      ],
+      "upsellText": "+ Mango Lassi +$3 · balances sweet heat",
+      "upsellLabel": "+ Mango Lassi",
+      "upsellPrice": 3,
+      "upsellNote": "balances sweet heat",
+      "available": true,
+      "filters": [
+        "vegan",
+        "late-night"
+      ]
+    },
+    {
+      "id": "dal-makhani-roti",
+      "kind": "menu",
+      "name": "Dal Makhani Roti",
+      "category": "Vegan Picks",
+      "description": "Creamy black lentil dal in a fresh roti wrap.",
+      "price": 11.99,
+      "image": "assets/Dal-Makhani-Roti.png",
+      "badges": [
+        "Veg Favorite"
+      ],
+      "badgeTone": "vegan",
+      "dietaryTags": [
+        "vegan"
+      ],
+      "upsellText": "+ Masala Chai +$3 · cozy add-on",
+      "available": true,
+      "menuPageTag": "V"
+    },
+    {
+      "id": "hakka-chilli-tofu-bowl",
+      "kind": "menu",
+      "name": "Hakka Chilli Tofu Bowl",
+      "category": "Vegan Picks",
+      "description": "Tangra style Indian Chinese with a tangy, sweet and spicy finish.",
+      "price": 14.99,
+      "image": "assets/hakka-chilli-tofu-bowl.png",
+      "artKey": "hakka-chilli-tofu-bowl",
+      "badges": [
+        "Comfort Bowl"
+      ],
+      "badgeTone": "vegan",
+      "dietaryTags": [
+        "vegan"
+      ],
+      "upsellText": "+ Papadum +$3 · extra crunch",
+      "upsellLabel": "+ Papadum",
+      "upsellPrice": 3,
+      "upsellNote": "extra crunch",
+      "available": true,
+      "filters": [
+        "vegan"
+      ]
+    },
+    {
+      "id": "plain-butter-roti",
+      "kind": "menu",
+      "name": "Plain Butter Roti",
+      "category": "Sides",
+      "description": "Fresh-made, brushed with butter.",
+      "homepageDescription": "Fresh-made and built for dipping.",
+      "price": 2.49,
+      "image": "assets/Plain-Butter-Roti.jpeg",
+      "artKey": "plain-butter-roti",
+      "badges": [
+        "Popular Add-On"
+      ],
+      "badgeTone": "default",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Extra roti +$2 · double dip",
+      "upsellLabel": "+ Extra roti",
+      "upsellPrice": 2,
+      "upsellNote": "double dip",
+      "available": true
+    },
+    {
+      "id": "raita",
+      "kind": "menu",
+      "name": "Raita",
+      "category": "Sides",
+      "description": "Cool yogurt, cucumber, fresh herbs.",
+      "homepageDescription": "Cool yogurt relief for richer curries.",
+      "price": 2.99,
+      "image": "assets/Raita.png",
+      "artKey": "raita",
+      "badges": [
+        "Cooling Side"
+      ],
+      "badgeTone": "safe",
+      "dietaryTags": [
+        "vegetarian",
+        "gf"
+      ],
+      "upsellText": "+ Biryani +$16 · natural match",
+      "upsellLabel": "+ Biryani",
+      "upsellPrice": 16,
+      "upsellNote": "natural match",
+      "available": true
+    },
+    {
+      "id": "mango-chutney",
+      "kind": "menu",
+      "name": "Mango Chutney",
+      "category": "Sides",
+      "description": "Sweet, tangy mango chutney for dipping and pairing.",
+      "homepageDescription": "Sweet, tangy and built for dipping.",
+      "price": 1.99,
+      "image": "assets/Mango-Chutney.png",
+      "badges": [
+        "DIP"
+      ],
+      "badgeTone": "side",
+      "dietaryTags": [
+        "vegan"
+      ],
+      "upsellText": "+ Papadum +$2.99 · adds crunch",
+      "upsellLabel": "+ Papadum",
+      "upsellPrice": 2.99,
+      "upsellNote": "adds crunch",
+      "available": true
+    },
+    {
+      "id": "masala-fries",
+      "kind": "menu",
+      "name": "Masala Fries",
+      "category": "Sides",
+      "description": "Crispy fries tossed in house masala blend.",
+      "homepageDescription": "Fast, salty, and easy to tack onto anything.",
+      "price": 5.49,
+      "image": "assets/Masala-Fries.png",
+      "artKey": "masala-fries",
+      "badges": [
+        "Always Works"
+      ],
+      "badgeTone": "late-night",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Garlic sauce +$1 · worth it",
+      "upsellLabel": "+ Garlic sauce",
+      "upsellPrice": 1,
+      "upsellNote": "worth it",
+      "available": true,
+      "filters": [
+        "late-night"
+      ]
+    },
+    {
+      "id": "mango-lassi",
+      "kind": "menu",
+      "name": "Mango Lassi",
+      "category": "Desserts & Drinks",
+      "subcategory": "Drink",
+      "description": "Thick, sweet, fresh mango.",
+      "homepageDescription": "The easiest upsell on the whole menu.",
+      "price": 3.99,
+      "image": "assets/mango-lassi.png",
+      "artKey": "mango-lassi",
+      "badges": [
+        "Most Added Drink"
+      ],
+      "badgeTone": "safe",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Combo +$3 · completes the meal",
+      "upsellLabel": "+ Combo",
+      "upsellPrice": 3,
+      "upsellNote": "completes the meal",
+      "available": true
+    },
+    {
+      "id": "gulab-jamun",
+      "kind": "menu",
+      "name": "Gulab Jamun",
+      "category": "Desserts & Drinks",
+      "subcategory": "Dessert",
+      "description": "Milk-solid dumplings in rose syrup.",
+      "homepageDescription": "Warm, syrupy, and built for dessert add-ons.",
+      "price": 4.49,
+      "image": "assets/Gulab-Jamun.png",
+      "artKey": "gulab-jamun",
+      "badges": [
+        "Sweet Finish"
+      ],
+      "badgeTone": "default",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Chai +$3 · cozy pairing",
+      "upsellLabel": "+ Chai",
+      "upsellPrice": 3,
+      "upsellNote": "cozy pairing",
+      "available": true
+    },
+    {
+      "id": "masala-chai",
+      "kind": "menu",
+      "name": "Masala Chai",
+      "category": "Desserts & Drinks",
+      "subcategory": "Drink",
+      "description": "Brewed with ginger, cardamom, cinnamon.",
+      "homepageDescription": "Warm spice and a great low-friction add-on.",
+      "price": 3.49,
+      "image": "assets/masala-chai.png",
+      "artKey": "masala-chai",
+      "badges": [
+        "Warm Pick"
+      ],
+      "badgeTone": "default",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Samosa +$6 · chai-time combo",
+      "upsellLabel": "+ Samosa",
+      "upsellPrice": 6,
+      "upsellNote": "chai-time combo",
+      "available": true
+    },
+    {
+      "id": "rose-lassi",
+      "kind": "menu",
+      "name": "Rose Lassi",
+      "category": "Desserts & Drinks",
+      "subcategory": "Drink",
+      "description": "Creamy yogurt drink with rose water.",
+      "homepageDescription": "Lighter, floral, and easy to add at checkout.",
+      "price": 3.99,
+      "image": "assets/Rose-Lassi.png",
+      "artKey": "rose-lassi",
+      "badges": [
+        "Floral Pick"
+      ],
+      "badgeTone": "default",
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Gulab Jamun +$4 · dessert set",
+      "upsellLabel": "+ Gulab Jamun",
+      "upsellPrice": 4,
+      "upsellNote": "dessert set",
+      "available": true
+    },
+    {
+      "id": "kheer",
+      "kind": "menu",
+      "name": "Kheer",
+      "category": "Desserts & Drinks",
+      "subcategory": "Dessert",
+      "description": "Cardamom rice pudding, topped with pistachios.",
+      "price": 4.99,
+      "image": "",
+      "badges": [
+        "Dessert"
+      ],
+      "dietaryTags": [
+        "vegetarian"
+      ],
+      "upsellText": "+ Chai +$3 · classic finish",
+      "available": false
+    },
+    {
+      "id": "nimbu-pani",
+      "kind": "menu",
+      "name": "Nimbu Pani",
+      "category": "Desserts & Drinks",
+      "subcategory": "Drink",
+      "description": "Fresh lime soda, black salt, mint.",
+      "price": 3.49,
+      "image": "",
+      "badges": [
+        "Drink"
+      ],
+      "dietaryTags": [
+        "vegan"
+      ],
+      "upsellText": "+ Samosa +$6 · sharp and salty combo",
+      "available": false
+    },
+    {
+      "id": "kk-classic",
+      "kind": "combo",
+      "name": "KK Classic",
+      "category": "Combos",
+      "description": "Ready in 5 min",
+      "price": 19.99,
+      "image": "assets/KK-Classic.png",
+      "artKey": "combo-kk-classic",
+      "badges": [
+        "First-timer pick"
+      ],
+      "dietaryTags": [],
+      "upsellText": "Save $2.98",
+      "available": true,
+      "includes": [
+        "Butter Chicken Roti",
+        "Mango Lassi",
+        "Side of Raita"
+      ],
+      "saves": "Save $2.98",
+      "intent": "First-timer pick",
+      "intentClass": "value",
+      "featured": false,
+      "prepNote": "Ready in 5 min"
+    },
+    {
+      "id": "big-plate",
+      "kind": "combo",
+      "name": "The Big Plate",
+      "category": "Combos",
+      "description": "Skipped lunch? This.",
+      "price": 24.99,
+      "image": "",
+      "artKey": "combo-big-plate",
+      "badges": [
+        "Big Eater"
+      ],
+      "dietaryTags": [],
+      "upsellText": "Save $5.47",
+      "available": true,
+      "includes": [
+        "Chicken Dum Biryani",
+        "Honey Garlic Cauliflower",
+        "Gulab Jamun"
+      ],
+      "saves": "Save $5.47",
+      "intent": "Big Eater",
+      "intentClass": "value"
+    },
+    {
+      "id": "vegan-hero",
+      "kind": "combo",
+      "name": "Vegan Hero",
+      "category": "Combos",
+      "description": "Ready in 5 min",
+      "price": 20.99,
+      "image": "assets/vegan-hero.png",
+      "artKey": "combo-vegan-hero",
+      "badges": [
+        "Vegan favorite"
+      ],
+      "dietaryTags": [
+        "vegan"
+      ],
+      "upsellText": "Save $3",
+      "available": true,
+      "includes": [
+        "Tofu Spinach Roti",
+        "2 pc Samosa",
+        "Chai"
+      ],
+      "saves": "Save $3",
+      "intent": "Vegan favorite",
+      "intentClass": "vegan",
+      "featured": false,
+      "prepNote": "Ready in 5 min"
+    },
+    {
+      "id": "two-am-pack",
+      "kind": "combo",
+      "name": "2 AM Pack",
+      "category": "Combos",
+      "description": "After the bar. Before the bed.",
+      "price": 24.99,
+      "image": "assets/2am-pack.png",
+      "artKey": "combo-2am-pack",
+      "badges": [
+        "Late Night only"
+      ],
+      "dietaryTags": [],
+      "upsellText": "Save $2.97",
+      "available": true,
+      "includes": [
+        "Butter Chicken Poutine",
+        "Fried Chicken",
+        "Indian Cold Drink"
+      ],
+      "saves": "Save $2.97",
+      "intent": "Late Night only",
+      "intentClass": "late",
+      "featured": false,
+      "prepNote": "Best after midnight"
+    },
+    {
+      "id": "spice-seeker",
+      "kind": "combo",
+      "name": "Spice Seeker",
+      "category": "Combos",
+      "description": "Ready in 5 min",
+      "price": 29.99,
+      "image": "assets/lamb-combo.png",
+      "artKey": "combo-spice-seeker",
+      "badges": [
+        "Bring heat"
+      ],
+      "dietaryTags": [],
+      "upsellText": "Save $4.98",
+      "available": true,
+      "includes": [
+        "Lamb Vindaloo Roti 🔥",
+        "Soldier Chicken",
+        "Mango Lassi (you'll need it)"
+      ],
+      "saves": "Save $4.98",
+      "intent": "Bring heat",
+      "intentClass": "spicy",
+      "featured": false,
+      "prepNote": "Ready in 5 min"
+    },
+    {
+      "id": "family-feast",
+      "kind": "combo",
+      "name": "Family Feast",
+      "category": "Combos",
+      "description": "Best for 3–4 people",
+      "price": 55.99,
+      "image": "assets/Family-feast.png",
+      "artKey": "combo-family-feast",
+      "badges": [
+        "Group value"
+      ],
+      "dietaryTags": [],
+      "upsellText": "Save $11.99",
+      "available": true,
+      "includes": [
+        "2× Butter Chicken Roti",
+        "Chicken Dum Biryani (large)",
+        "Honey Garlic Cauliflower",
+        "4 Gulab Jamuns"
+      ],
+      "saves": "Save $11.99",
+      "intent": "Group value",
+      "intentClass": "family",
+      "featured": false,
+      "prepNote": "Best for 3–4 people"
+    },
+    {
+      "id": "comfort-combo",
+      "kind": "combo",
+      "name": "Comfort Combo",
+      "category": "Combos",
+      "description": "Ready in 5 min",
+      "price": 15.99,
+      "image": "assets/comfort-combo.png",
+      "artKey": "combo-comfort-combo",
+      "badges": [
+        "Most Popular"
+      ],
+      "dietaryTags": [],
+      "upsellText": "Save $2.47",
+      "available": true,
+      "includes": [
+        "Chicken over rice",
+        "Drink",
+        "Gulab Jamun",
+        "Papadoms"
+      ],
+      "saves": "Save $2.47",
+      "intent": "Most Popular",
+      "intentClass": "solo",
+      "featured": true,
+      "prepNote": "Ready in 5 min"
+    },
+    {
+      "id": "ninety-second-biryani",
+      "kind": "combo",
+      "name": "90-Second Biryani",
+      "category": "Combos",
+      "description": "Ready in 90 sec",
+      "price": 15.99,
+      "image": "assets/90-Second-biryani.png",
+      "artKey": "combo-90-second-biryani",
+      "badges": [
+        "Fastest pick"
+      ],
+      "dietaryTags": [],
+      "upsellText": "Save $2.49",
+      "available": true,
+      "includes": [
+        "Chicken Dum Biryani",
+        "Raita",
+        "Cold Drink"
+      ],
+      "saves": "Save $2.49",
+      "intent": "Fastest pick",
+      "intentClass": "late",
+      "featured": false,
+      "prepNote": "Ready in 90 sec"
+    }
+  ]
+}

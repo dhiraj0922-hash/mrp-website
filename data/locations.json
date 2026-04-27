@@ -1,0 +1,154 @@
+{
+  "locations": [
+    {
+      "id": "queens-quay",
+      "name": "Queens Quay",
+      "address": "12 Queens Quay W",
+      "hoursText": "8 AM – 4 AM daily",
+      "note": "Flagship",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=12+Queens+Quay+W+Toronto+ON"
+    },
+    {
+      "id": "queen-st-w",
+      "name": "Queen St W",
+      "address": "406 Queen St W",
+      "hoursText": "Open 24/7",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=406+Queen+St+W+Toronto+ON"
+    },
+    {
+      "id": "king-st-w",
+      "name": "King St W",
+      "address": "901 King St W",
+      "hoursText": "Till 5 AM weekends",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=901+King+St+W+Toronto+ON"
+    },
+    {
+      "id": "bayview",
+      "name": "Bayview",
+      "address": "1574 Bayview Ave",
+      "hoursText": "8:30 AM – 2 AM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1574+Bayview+Ave+Toronto+ON"
+    },
+    {
+      "id": "kingston-rd",
+      "name": "Kingston Rd",
+      "address": "4525 Kingston Rd",
+      "hoursText": "11 AM – 12 AM Fri/Sat",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=4525+Kingston+Rd+Toronto+ON"
+    },
+    {
+      "id": "queen-st-e",
+      "name": "Queen St E",
+      "address": "948 Queen St E",
+      "hoursText": "11 AM – 10 PM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=948+Queen+St+E+Toronto+ON"
+    },
+    {
+      "id": "vaughan-major-mackenzie",
+      "name": "Vaughan",
+      "address": "1430 Major Mackenzie",
+      "hoursText": "Till midnight weekends",
+      "note": "",
+      "isActive": false,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1430+Major+Mackenzie+Vaughan+ON"
+    },
+    {
+      "id": "weston-rd",
+      "name": "Weston Rd",
+      "address": "70 Weston Road",
+      "hoursText": "Till midnight weekends",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=70+Weston+Road+Toronto+ON"
+    },
+    {
+      "id": "oshawa",
+      "name": "Oshawa",
+      "address": "77 King St E",
+      "hoursText": "Till midnight daily",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=77+King+St+E+Oshawa+ON"
+    },
+    {
+      "id": "square-one",
+      "name": "Square One",
+      "address": "100 City Centre Dr",
+      "hoursText": "10 AM – 9 PM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=100+City+Centre+Dr+Mississauga+ON"
+    },
+    {
+      "id": "london-on",
+      "name": "London ON",
+      "address": "849 Wellington",
+      "hoursText": "24 hrs weekends",
+      "note": "4.9★",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=849+Wellington+Road+London+ON"
+    },
+    {
+      "id": "dundas-mississauga",
+      "name": "Dundas Mississauga",
+      "address": "2458 Dundas St W",
+      "hoursText": "Till 4 AM daily",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2458+Dundas+St+W+Mississauga+ON"
+    },
+    {
+      "id": "newmarket",
+      "name": "Newmarket",
+      "address": "1111 Davis Drive",
+      "hoursText": "Till 10 PM Fri/Sat",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1111+Davis+Drive+Newmarket+ON"
+    },
+    {
+      "id": "stoney-creek",
+      "name": "Stoney Creek",
+      "address": "1807 Stone Church Rd E",
+      "hoursText": "Till 12:30 AM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1807+Stone+Church+Rd+E+Stoney+Creek+ON"
+    },
+    {
+      "id": "woodside-square",
+      "name": "Woodside Square",
+      "address": "1571 Sandhurst Circle",
+      "hoursText": "Inside the mall",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://ordermyroti.com",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1571+Sandhurst+Circle+Toronto+ON"
+    }
+  ]
+}
