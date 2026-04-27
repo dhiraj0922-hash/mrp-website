@@ -1,6 +1,6 @@
 (function () {
   const CART_KEY = 'mrp-cart';
-  const ORDER_URL = 'https://ordermyroti.com';
+  const ORDER_URL = 'https://myrotiplace.bycalibre.ca/';
   // Cart is preview-only until Order My Roti provides API/deep-link cart support.
 
   function readCart() {

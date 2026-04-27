@@ -7,7 +7,7 @@
       "hoursText": "8 AM – 4 AM daily",
       "note": "Flagship",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=12+Queens+Quay+W+Toronto+ON"
     },
     {
@@ -17,7 +17,7 @@
       "hoursText": "Open 24/7",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=406+Queen+St+W+Toronto+ON"
     },
     {
@@ -27,7 +27,7 @@
       "hoursText": "Till 5 AM weekends",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=901+King+St+W+Toronto+ON"
     },
     {
@@ -37,7 +37,7 @@
       "hoursText": "8:30 AM – 2 AM",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=1574+Bayview+Ave+Toronto+ON"
     },
     {
@@ -47,7 +47,7 @@
       "hoursText": "11 AM – 12 AM Fri/Sat",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=4525+Kingston+Rd+Toronto+ON"
     },
     {
@@ -57,7 +57,7 @@
       "hoursText": "11 AM – 10 PM",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=948+Queen+St+E+Toronto+ON"
     },
     {
@@ -67,7 +67,7 @@
       "hoursText": "Till midnight weekends",
       "note": "",
       "isActive": false,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=1430+Major+Mackenzie+Vaughan+ON"
     },
     {
@@ -77,7 +77,7 @@
       "hoursText": "Till midnight weekends",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=70+Weston+Road+Toronto+ON"
     },
     {
@@ -87,7 +87,7 @@
       "hoursText": "Till midnight daily",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=77+King+St+E+Oshawa+ON"
     },
     {
@@ -97,7 +97,7 @@
       "hoursText": "10 AM – 9 PM",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=100+City+Centre+Dr+Mississauga+ON"
     },
     {
@@ -107,7 +107,7 @@
       "hoursText": "24 hrs weekends",
       "note": "4.9★",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=849+Wellington+Road+London+ON"
     },
     {
@@ -117,7 +117,7 @@
       "hoursText": "Till 4 AM daily",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=2458+Dundas+St+W+Mississauga+ON"
     },
     {
@@ -127,7 +127,7 @@
       "hoursText": "Till 10 PM Fri/Sat",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=1111+Davis+Drive+Newmarket+ON"
     },
     {
@@ -137,7 +137,7 @@
       "hoursText": "Till 12:30 AM",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=1807+Stone+Church+Rd+E+Stoney+Creek+ON"
     },
     {
@@ -147,7 +147,7 @@
       "hoursText": "Inside the mall",
       "note": "",
       "isActive": true,
-      "orderUrl": "https://ordermyroti.com",
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=1571+Sandhurst+Circle+Toronto+ON"
     }
   ]

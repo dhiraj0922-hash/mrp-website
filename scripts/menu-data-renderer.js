@@ -1,6 +1,6 @@
 (function () {
   const DATA_PATH = 'data/menu.json';
-  const ORDER_URL = 'https://ordermyroti.com';
+  const ORDER_URL = 'https://myrotiplace.bycalibre.ca/';
 
   const ART_MAP = {
     'chicken-tikka-roti': `<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#C4861C"/><ellipse cx="200" cy="155" rx="145" ry="85" fill="#F6EFE2"/><ellipse cx="200" cy="150" rx="132" ry="72" fill="#C0382C"/><circle cx="150" cy="140" r="10" fill="#F6EFE2" opacity=".8"/><circle cx="235" cy="150" r="9" fill="#F6EFE2" opacity=".7"/><circle cx="195" cy="175" r="8" fill="#5B6E3A" opacity=".9"/></svg>`,
