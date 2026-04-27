@@ -115,8 +115,8 @@
             <div class="builder-shell-head">
               <div>
                 <span class="eyebrow">Build Your Own Roti</span>
-                <h2>Customize in four quick steps, <em>without the friction.</em></h2>
-                <p>Pick a base, choose your protein, lock in a curry, then dial the spice. Fast enough for mobile, flexible enough for regulars.</p>
+                <h2>Customize your roti <em>in four quick steps.</em></h2>
+                <p>Pick your base, choose your protein, select a curry, and dial the spice just the way you like it.</p>
               </div>
               <a href="#combos" class="btn btn-outline builder-combo-link">Prefer a combo?</a>
             </div>
