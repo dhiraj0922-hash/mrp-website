@@ -127,7 +127,7 @@
       "description": "Slow-simmered butter chicken in a fresh-made roti.",
       "homepageDescription": "Creamy. Smoky. Wrapped fresh.",
       "sectionDescription": "Rich, creamy, and wrapped fresh every time.",
-      "price": 16.99,
+      "price": 12.99,
       "image": "assets/butter-chicken-roti.jpg",
       "badges": [
         "Most Ordered Today",
@@ -227,10 +227,10 @@
       ],
       "badgeTone": "late-night",
       "dietaryTags": [],
-      "upsellText": "+ Mango Lassi +$3 · balance the heat",
+      "upsellText": "+ Mango Lassi +$3 · sweet pairing",
       "upsellLabel": "+ Mango Lassi",
       "upsellPrice": 3,
-      "upsellNote": "balance the heat",
+      "upsellNote": "sweet pairing",
       "addUpsellPrompt": "Cool it down with a Mango Lassi!",
       "available": true,
       "filters": [
@@ -312,10 +312,10 @@
       ],
       "badgeTone": "late-night",
       "dietaryTags": [],
-      "upsellText": "+ Masala Chai +$3 · crowd surprise",
+      "upsellText": "+ Masala Chai +$3 · classic pairing",
       "upsellLabel": "+ Masala Chai",
       "upsellPrice": 3,
-      "upsellNote": "crowd surprise",
+      "upsellNote": "classic pairing",
       "available": true,
       "filters": [
         "spicy"
@@ -444,10 +444,10 @@
       "dietaryTags": [
         "vegetarian"
       ],
-      "upsellText": "+ Masala Chai +$3 · easy yes",
+      "upsellText": "+ Masala Chai +$3 · classic pairing",
       "upsellLabel": "+ Masala Chai",
       "upsellPrice": 3,
-      "upsellNote": "easy yes",
+      "upsellNote": "classic pairing",
       "available": true,
       "filters": []
     },
@@ -468,10 +468,10 @@
       "dietaryTags": [
         "vegan"
       ],
-      "upsellText": "+ Mango Lassi +$3 · balances sweet heat",
+      "upsellText": "+ Mango Lassi +$3 · sweet pairing",
       "upsellLabel": "+ Mango Lassi",
       "upsellPrice": 3,
-      "upsellNote": "balances sweet heat",
+      "upsellNote": "sweet pairing",
       "available": true,
       "filters": [
         "vegan",
@@ -493,7 +493,7 @@
       "dietaryTags": [
         "vegan"
       ],
-      "upsellText": "+ Masala Chai +$3 · cozy add-on",
+      "upsellText": "+ Masala Chai +$3 · classic pairing",
       "available": true,
       "menuPageTag": "V"
     },
