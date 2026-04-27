@@ -2332,28 +2332,34 @@ p { margin: 0 0 1em; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: var(--card-media-position, center center);
+  transform: scale(var(--card-media-scale, 1));
   transition: transform .3s ease;
 }
 .hit-card:hover .hit-photo svg,
 .hit-card:hover .hit-photo img {
-  transform: scale(1.06);
+  transform: scale(var(--card-media-scale-hover, 1.04));
 }
 
 /* Behavioral tag — top-left corner, one per card (usually) */
 .hit-tag {
   position: absolute;
-  top: 14px;
-  left: 14px;
-  padding: .34rem .78rem;
+  top: 18px;
+  left: 18px;
+  padding: .4rem .82rem;
   border-radius: 999px;
   font-size: .7rem;
   font-weight: 800;
   letter-spacing: .06em;
   text-transform: uppercase;
   z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+  max-width: min(68%, calc(100% - 108px));
+  line-height: 1.2;
+  white-space: normal;
   background: #1f1a14;
   color: #fff;
   border: 1px solid rgba(255,255,255,0.08);
@@ -2380,20 +2386,26 @@ p { margin: 0 0 1em; }
 /* Heat badge — top-right, compact */
 .hit-heat {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 18px;
+  right: 18px;
   background: rgba(31, 26, 21, 0.85);
   backdrop-filter: blur(8px);
   color: var(--cream);
-  padding: .25rem .6rem;
+  padding: .32rem .68rem;
   border-radius: 999px;
   font-size: .7rem;
   font-weight: 700;
   letter-spacing: .04em;
   z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  gap: .3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 6px;
+  max-width: min(42%, calc(100% - 112px));
+  line-height: 1.2;
+  white-space: normal;
+  text-align: right;
 }
 .hit-heat .mini-flame {
   width: 8px; height: 10px;
@@ -2405,7 +2417,7 @@ p { margin: 0 0 1em; }
 .hit-heat.hot .mini-flame.on { background: #FF5733; }
 
 .hit-body {
-  padding: 1rem 1.2rem 1.2rem;
+  padding: 1.15rem 1.2rem 1.2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -2413,7 +2425,7 @@ p { margin: 0 0 1em; }
 .hit-body h3 {
   font-size: 1.2rem;
   line-height: 1.15;
-  margin: 0 0 .3rem;
+  margin: 0 0 .42rem;
 }
 
 /* "Who this is for" — the decision-aid line */
@@ -2433,7 +2445,7 @@ p { margin: 0 0 1em; }
   color: var(--muted);
   font-size: .85rem;
   line-height: 1.4;
-  margin: 0 0 .9rem;
+  margin: 0 0 1rem;
   flex: 1;
 }
 
@@ -2442,14 +2454,14 @@ p { margin: 0 0 1em; }
   align-items: center;
   justify-content: space-between;
   gap: .5rem;
-  padding-top: .75rem;
+  padding-top: .9rem;
   border-top: 1px solid var(--line);
 }
 /* All cards with data-item: stack upsell below price+add row */
 .hit-card[data-item] .hit-foot {
   flex-direction: column;
   align-items: stretch;
-  gap: 0;
+  gap: .6rem;
 }
 
 /* ── Pill upsell button ── */
@@ -2488,14 +2500,14 @@ p { margin: 0 0 1em; }
   font-size: .88rem;
   font-weight: 600;
   color: var(--charcoal);
-  margin: .25rem 0 .9rem;
+  margin: .32rem 0 1rem;
   line-height: 1.3;
 }
 .upsell-line {
   display: flex;
   align-items: center;
   gap: .35rem;
-  margin-top: 7px;
+  margin-top: .15rem;
   flex-wrap: nowrap;
   overflow: hidden;
 }
@@ -3706,6 +3718,9 @@ p { margin: 0 0 1em; }
   z-index: 3;
   white-space: nowrap;
 }
+.combo-wall .combo-card[data-item-id="comfort-combo"].featured::before {
+  content: none;
+}
 .combo-wall .combo-photo {
   aspect-ratio: 16 / 10;
   position: relative;
@@ -3727,17 +3742,49 @@ p { margin: 0 0 1em; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: var(--combo-media-position, center center);
+  transform: scale(var(--combo-media-scale, 1));
   transition: transform .3s ease;
+}
+.hit-card[data-item-id="butter-chicken-roti"],
+.hit-card[data-item-id="chicken-tikka-roti"],
+.hit-card[data-item-id="paneer-tikka-roti"],
+.hit-card[data-item-id="lamb-seekh-roti"],
+.hit-card[data-item="Butter Chicken Roti"],
+.hit-card[data-item="Butter Chicken Roti Signature"],
+.hit-card[data-item="Chicken Tikka Roti"],
+.hit-card[data-item="Paneer Tikka Roti"],
+.hit-card[data-item="Lamb Seekh Roti"] {
+  --card-media-position: center 42%;
+  --card-media-scale: .95;
+  --card-media-scale-hover: .99;
+}
+.hit-card[data-item-id="chicken-dum-biryani"],
+.hit-card[data-item-id="chole-chawal"],
+.hit-card[data-item-id="butter-chicken-poutine"],
+.hit-card[data-item="Chicken Dum Biryani"],
+.hit-card[data-item="Chole Chawal"],
+.hit-card[data-item="Butter Chicken Poutine"] {
+  --card-media-position: center center;
+  --card-media-scale: 1;
+  --card-media-scale-hover: 1.04;
+}
+.combo-card[data-item-id="comfort-combo"],
+.combo-card[data-item-id="kk-classic"],
+.combo-card[data-item-id="vegan-hero"] {
+  --combo-media-position: center 44%;
+  --combo-media-scale: .97;
+  --combo-media-scale-hover: 1.01;
 }
 .combo-wall .combo-card:hover .combo-photo svg,
 .combo-wall .combo-card:hover .combo-photo img {
-  transform: scale(1.06);
+  transform: scale(var(--combo-media-scale-hover, 1.04));
 }
 .combo-wall .combo-intent {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: .35rem .8rem;
+  top: 18px;
+  left: 18px;
+  padding: .42rem .82rem;
   border-radius: 999px;
   font-size: .68rem;
   font-weight: 700;
@@ -3747,9 +3794,13 @@ p { margin: 0 0 1em; }
   background: rgba(31, 26, 21, 0.85);
   backdrop-filter: blur(8px);
   color: var(--cream);
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+  max-width: calc(100% - 36px);
+  line-height: 1.2;
+  white-space: normal;
 }
 .combo-wall .combo-intent.solo { background: var(--leaf); }
 .combo-wall .combo-intent.family { background: var(--curry-red); }
@@ -3758,7 +3809,7 @@ p { margin: 0 0 1em; }
 .combo-wall .combo-intent.late { background: var(--charcoal); color: var(--saffron); }
 .combo-wall .combo-intent.value { background: var(--turmeric-deep); color: var(--charcoal); }
 .combo-wall .combo-card-body {
-  padding: 1.1rem 1.3rem 1.3rem;
+  padding: 1.22rem 1.3rem 1.35rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -3768,14 +3819,14 @@ p { margin: 0 0 1em; }
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.15;
-  margin: 0 0 .35rem;
+  margin: 0 0 .45rem;
   color: var(--charcoal);
 }
 .combo-wall .combo-who {
   font-size: .8rem;
   font-weight: 600;
   color: var(--curry-red);
-  margin-bottom: .65rem;
+  margin-bottom: .8rem;
   display: flex;
   align-items: center;
   gap: .35rem;
@@ -3784,12 +3835,12 @@ p { margin: 0 0 1em; }
 .combo-wall .combo-includes {
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem;
+  margin: 0 0 1.1rem;
   font-size: .85rem;
   color: var(--ink);
 }
 .combo-wall .combo-includes li {
-  padding: .25rem 0;
+  padding: .3rem 0;
   display: flex;
   align-items: flex-start;
   gap: .5rem;
