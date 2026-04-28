@@ -46,7 +46,7 @@
 
 /* Reset */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   font-family: var(--f-body);
@@ -73,6 +73,14 @@ h1, h2, h3, h4 {
 p { margin: 0 0 1em; }
 
 .container { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+.site-header,
+.hero-v2,
+.hero-v2 .container,
+.hero-v2-grid,
+.nav-row,
+.nav-cta {
+  max-width: 100%;
+}
 
 /* =========== Announcement / top strip =========== */
 .top-strip {
@@ -100,6 +108,7 @@ p { margin: 0 0 1em; }
   justify-content: space-between;
   gap: 2rem;
   padding: 1rem 0;
+  min-width: 0;
 }
 .brand {
   font-family: var(--f-display);
@@ -194,6 +203,7 @@ p { margin: 0 0 1em; }
 }
 .nav-cta {
   display: flex; gap: .75rem; align-items: center;
+  min-width: 0;
 }
 .btn {
   display: inline-flex; align-items: center; gap: .5rem;
@@ -241,6 +251,7 @@ p { margin: 0 0 1em; }
   .nav-row { gap: 1rem; padding: .8rem 0; }
   .nav-cta { gap: .55rem; flex-shrink: 0; }
   .nav-cta .btn-primary { padding: .72rem 1rem; font-size: .82rem; }
+  .brand-logo { flex: 1 1 auto; min-width: 0; }
   .mobile-open .nav-links {
     display: flex; flex-direction: column;
     position: absolute; top: 100%; left: 0; right: 0;
@@ -294,6 +305,10 @@ p { margin: 0 0 1em; }
     min-width: 0;
   }
   .menu-toggle { flex-basis: 30px; width: 30px; height: 30px; }
+  .hero-v2 h1 {
+    font-size: clamp(2.3rem, 11vw, 3.2rem);
+    line-height: 0.98;
+  }
 }
 
 /* =========== HERO =========== */
@@ -873,6 +888,7 @@ p { margin: 0 0 1em; }
   gap: clamp(2.5rem, 5vw, 4rem);
   align-items: center;
 }
+.hero-v2-grid > * { min-width: 0; }
 @media (max-width: 960px) { .hero-v2-grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) {
   .hero-v2-grid { gap: 1.6rem; }
@@ -898,7 +914,7 @@ p { margin: 0 0 1em; }
   letter-spacing: -0.025em;
   overflow-wrap: anywhere;
   word-break: normal;
-  max-width: 12ch;
+  max-width: 100%;
 }
 .hero-v2 h1 em { font-style: italic; color: var(--curry-red); font-weight: 400; }
 .hero-v2 h1 .underline {

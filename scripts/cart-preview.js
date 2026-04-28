@@ -156,7 +156,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        width: min(420px, 100vw);
+        width: min(420px, 100%);
         height: 100vh;
         background: #F6EFE2;
         color: #1F1A15;
@@ -345,8 +345,8 @@
         .mrp-cart-drawer {
           top: auto;
           bottom: 0;
-          width: 100vw;
-          max-width: 100vw;
+          width: 100%;
+          max-width: 100%;
           height: min(82vh, 700px);
           border-radius: 24px 24px 0 0;
           box-shadow: 0 -20px 60px -24px rgba(31, 26, 21, 0.38);
@@ -367,7 +367,7 @@
         }
         .mrp-cart-toast {
           bottom: 92px;
-          max-width: calc(100vw - 32px);
+          max-width: calc(100% - 32px);
           text-align: center;
         }
         .mrp-cart-line-top,
