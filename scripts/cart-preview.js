@@ -326,18 +326,21 @@
         opacity: 1;
         transform: translateX(-50%) translateY(0);
       }
-      @media (max-width: 720px) {
+      @media (max-width: 768px) {
         .nav-cta .mrp-cart-launcher {
-          padding: .62rem;
-          gap: .35rem;
+          order: 0;
+          padding: .56rem;
+          gap: .25rem;
+          min-width: 40px;
+          min-height: 40px;
         }
         .nav-cta .mrp-cart-launcher > span:first-of-type {
           display: none;
         }
         .nav-cta .mrp-cart-launcher-count {
-          min-width: 1.35rem;
-          height: 1.35rem;
-          font-size: .72rem;
+          min-width: 1.2rem;
+          height: 1.2rem;
+          font-size: .68rem;
         }
         .mrp-cart-drawer {
           top: auto;
