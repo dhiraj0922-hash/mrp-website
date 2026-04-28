@@ -370,7 +370,7 @@
       "description": "Tender slow-cooked lamb. Bold spices, dum-sealed.",
       "homepageDescription": "Slow-cooked lamb and bold spice depth.",
       "price": 16.99,
-      "image": "assets/Lamb-Biryani.png",
+      "image": "assets/lamb-biryani.png",
       "artKey": "lamb-biryani",
       "badges": [
         "Premium Pick"
@@ -391,7 +391,7 @@
       "category": "Biryani",
       "description": "Seasonal vegetables, fragrant basmati, dum style.",
       "price": 13.99,
-      "image": "assets/Vegetable-dum-biryani.png",
+      "image": "assets/vegetable-dum-biryani.png",
       "badges": [
         "Veg"
       ],
@@ -411,7 +411,7 @@
       "description": "Crispy shells, tangy tamarind water, spiced potato.",
       "homepageDescription": "Crunchy, tangy, and fast-shareable.",
       "price": 7.99,
-      "image": "assets/Pani-puri.png",
+      "image": "assets/pani-puri.png",
       "artKey": "pani-puri",
       "badges": [
         "Street Favorite"
@@ -485,7 +485,7 @@
       "category": "Vegan Picks",
       "description": "Creamy black lentil dal in a fresh roti wrap.",
       "price": 11.99,
-      "image": "assets/Dal-Makhani-Roti.png",
+      "image": "assets/dal-makhani-roti.png",
       "badges": [
         "Veg Favorite"
       ],
@@ -530,7 +530,7 @@
       "description": "Fresh-made, brushed with butter.",
       "homepageDescription": "Fresh-made and built for dipping.",
       "price": 2.49,
-      "image": "assets/Plain-Butter-Roti.jpeg",
+      "image": "assets/plain-butter-roti.jpeg",
       "artKey": "plain-butter-roti",
       "badges": [
         "Popular Add-On"
@@ -553,7 +553,7 @@
       "description": "Cool yogurt, cucumber, fresh herbs.",
       "homepageDescription": "Cool yogurt relief for richer curries.",
       "price": 2.99,
-      "image": "assets/Raita.png",
+      "image": "assets/raita.png",
       "artKey": "raita",
       "badges": [
         "Cooling Side"
@@ -577,7 +577,7 @@
       "description": "Sweet, tangy mango chutney for dipping and pairing.",
       "homepageDescription": "Sweet, tangy and built for dipping.",
       "price": 1.99,
-      "image": "assets/Mango-Chutney.png",
+      "image": "assets/mango-chutney.png",
       "badges": [
         "DIP"
       ],
@@ -599,7 +599,7 @@
       "description": "Crispy fries tossed in house masala blend.",
       "homepageDescription": "Fast, salty, and easy to tack onto anything.",
       "price": 5.49,
-      "image": "assets/Masala-Fries.png",
+      "image": "assets/masala-fries.png",
       "artKey": "masala-fries",
       "badges": [
         "Always Works"
@@ -698,7 +698,7 @@
       "description": "Creamy yogurt drink with rose water.",
       "homepageDescription": "Lighter, floral, and easy to add at checkout.",
       "price": 3.99,
-      "image": "assets/Rose-Lassi.png",
+      "image": "assets/rose-lassi.png",
       "artKey": "rose-lassi",
       "badges": [
         "Floral Pick"
@@ -756,7 +756,7 @@
       "category": "Combos",
       "description": "Ready in 5 min",
       "price": 19.99,
-      "image": "assets/KK-Classic.png",
+      "image": "assets/kk-classic.png",
       "artKey": "combo-kk-classic",
       "badges": [
         "First-timer pick"
@@ -886,7 +886,7 @@
       "category": "Combos",
       "description": "Best for 3–4 people",
       "price": 55.99,
-      "image": "assets/Family-feast.png",
+      "image": "assets/family-feast.png",
       "artKey": "combo-family-feast",
       "badges": [
         "Group value"
@@ -940,7 +940,7 @@
       "category": "Combos",
       "description": "Fast pickup favorite",
       "price": 15.99,
-      "image": "assets/90-Second-biryani.png",
+      "image": "assets/90-second-biryani.png",
       "artKey": "combo-90-second-biryani",
       "badges": [
         "Fastest pick"
