@@ -1918,6 +1918,76 @@ p { margin: 0 0 1em; }
 .mobile-bar button svg { width: 20px; height: 20px; color: var(--saffron); }
 .mobile-bar a.primary { background: var(--curry-red); }
 .mobile-bar a.primary svg { color: var(--cream); }
+.mobile-menu-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 10, 6, 0.34);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+  z-index: 109;
+}
+.mobile-menu-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 110;
+  background: var(--cream);
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -20px 60px -24px rgba(31, 26, 21, 0.38);
+  transform: translateY(100%);
+  transition: transform .24s ease;
+  padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+}
+.mobile-menu-sheet.is-open { transform: translateY(0); }
+.mobile-menu-sheet-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu-sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .8rem;
+}
+.mobile-menu-sheet-title {
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  color: var(--charcoal);
+  margin: 0;
+}
+.mobile-menu-sheet-close {
+  border: none;
+  background: transparent;
+  color: var(--charcoal);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.mobile-menu-sheet-list {
+  display: grid;
+  gap: .5rem;
+}
+.mobile-menu-sheet-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: .9rem 1rem;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--charcoal);
+  border: 1px solid var(--line);
+  font-size: .92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.mobile-menu-sheet-link::after {
+  content: '→';
+  color: var(--curry-red);
+  font-weight: 800;
+}
 
 @media (max-width: 720px) {
   .mobile-bar { display: flex; }
@@ -5080,6 +5150,22 @@ p { margin: 0 0 1em; }
   </button>
 </nav>
 
+<div class="mobile-menu-sheet-overlay" data-mobile-menu-overlay></div>
+<div class="mobile-menu-sheet" data-mobile-menu-sheet aria-hidden="true">
+  <div class="mobile-menu-sheet-head">
+    <h3 class="mobile-menu-sheet-title">Browse My Roti Place</h3>
+    <button type="button" class="mobile-menu-sheet-close" data-mobile-menu-close aria-label="Close mobile menu">×</button>
+  </div>
+  <div class="mobile-menu-sheet-list">
+    <a class="mobile-menu-sheet-link" href="index.html">Home</a>
+    <a class="mobile-menu-sheet-link" href="#menu">Menu</a>
+    <a class="mobile-menu-sheet-link" href="#combos">Pick a Combo</a>
+    <a class="mobile-menu-sheet-link" href="locations.html">Locations</a>
+    <a class="mobile-menu-sheet-link" href="late-night.html">Late Night</a>
+    <a class="mobile-menu-sheet-link" href="catering.html">Catering</a>
+  </div>
+</div>
+
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -5356,6 +5442,38 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+(function () {
+  const trigger = document.querySelector('.mobile-menu-trigger');
+  const sheet = document.querySelector('[data-mobile-menu-sheet]');
+  const overlay = document.querySelector('[data-mobile-menu-overlay]');
+  const closeBtn = document.querySelector('[data-mobile-menu-close]');
+  if (!trigger || !sheet || !overlay || !closeBtn) return;
+
+  const setOpen = (open) => {
+    sheet.classList.toggle('is-open', open);
+    overlay.classList.toggle('is-open', open);
+    sheet.setAttribute('aria-hidden', open ? 'false' : 'true');
+    trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+
+  trigger.setAttribute('aria-expanded', 'false');
+
+  trigger.addEventListener('click', () => {
+    setOpen(!sheet.classList.contains('is-open'));
+  });
+
+  closeBtn.addEventListener('click', () => setOpen(false));
+  overlay.addEventListener('click', () => setOpen(false));
+
+  sheet.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
+  });
+})();
 
 if (window.location.hash) {
   window.addEventListener('load', () => {
