@@ -56,6 +56,7 @@ body {
   background: var(--cream);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 img, svg, video { display: block; max-width: 100%; height: auto; }
 a { color: var(--curry-red); text-decoration: none; transition: color .2s ease; }
@@ -232,12 +233,18 @@ p { margin: 0 0 1em; }
 @media (max-width: 880px) {
   .nav-links, .nav-cta .btn-outline { display: none; }
   .menu-toggle { display: block; }
+  .nav-row { gap: 1rem; padding: .8rem 0; }
+  .nav-cta { gap: .55rem; flex-shrink: 0; }
+  .nav-cta .btn-primary { padding: .72rem 1rem; font-size: .82rem; }
   .mobile-open .nav-links {
     display: flex; flex-direction: column;
     position: absolute; top: 100%; left: 0; right: 0;
     background: var(--cream); padding: 1.5rem var(--gutter);
     border-bottom: 1px solid var(--line);
     gap: 1rem;
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
+    box-shadow: 0 18px 34px -26px rgba(31, 26, 21, 0.34);
   }
   .mobile-open .menu-nav-item {
     width: 100%;
@@ -249,6 +256,12 @@ p { margin: 0 0 1em; }
     width: 100%;
     text-align: left;
     padding: 0;
+  }
+  .mobile-open .nav-links a,
+  .mobile-open .nav-links button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
   .menu-popover {
     position: static;
@@ -266,6 +279,10 @@ p { margin: 0 0 1em; }
     display: grid;
     pointer-events: auto;
   }
+}
+@media (max-width: 560px) {
+  .nav-row { gap: .75rem; }
+  .nav-cta .btn-primary { padding: .68rem .92rem; font-size: .78rem; }
 }
 
 /* =========== HERO =========== */
@@ -846,6 +863,10 @@ p { margin: 0 0 1em; }
   align-items: center;
 }
 @media (max-width: 960px) { .hero-v2-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .hero-v2-grid { gap: 1.6rem; }
+  .hero-v2 h1 { font-size: clamp(2.5rem, 12vw, 3.6rem); }
+}
 
 .hero-badge {
   display: inline-flex; align-items: center; gap: 0;
@@ -1011,6 +1032,17 @@ p { margin: 0 0 1em; }
 }
 @media (max-width: 960px) {
   .hero-img-panel { max-width: 100%; min-height: 300px; transform: none; }
+}
+@media (max-width: 640px) {
+  .hero-img-panel { min-height: 260px; border-radius: 18px; }
+  .hero-img-label { left: 1rem; right: 1rem; bottom: 1rem; width: auto; }
+  .hero-cta-row { gap: .65rem; margin-bottom: 1.5rem; }
+  .hero-cta-row .btn,
+  .hero-cta-row .btn-xl {
+    flex: 1 1 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
 }
 .hero-img-panel img,
 .hero-img-panel video {
@@ -1860,6 +1892,20 @@ p { margin: 0 0 1em; }
 @media (max-width: 720px) {
   .mobile-bar { display: flex; }
   body { padding-bottom: 80px; }
+  .mobile-bar a,
+  .mobile-bar button { min-height: 52px; }
+}
+@media (max-width: 480px) {
+  .mobile-bar {
+    gap: .4rem;
+    padding: .55rem .65rem calc(.55rem + env(safe-area-inset-bottom));
+  }
+  .mobile-bar a,
+  .mobile-bar button {
+    min-width: 0;
+    padding: .58rem .3rem;
+    font-size: .68rem;
+  }
 }
 
 /* =========== Menu page v2 upgrades =========== */
@@ -2107,24 +2153,17 @@ p { margin: 0 0 1em; }
     gap: 2rem !important;
   }
 
-  /* Store cards: horizontal snap-scroll carousel, 1 card at a time */
+  /* Store cards: clean stacked grid on mobile */
   .late-v2 .container div[style*="grid-template-columns: 1fr 1fr"]:last-child {
-    display: flex !important;
-    flex-direction: row !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    gap: .75rem !important;
-    padding-bottom: 1rem !important;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .late-v2 .container div[style*="grid-template-columns: 1fr 1fr"]:last-child::-webkit-scrollbar {
-    display: none;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    overflow: visible !important;
+    gap: .85rem !important;
+    padding-bottom: 0 !important;
   }
   .late-v2 .container div[style*="grid-template-columns: 1fr 1fr"]:last-child .late-loc {
-    flex: 0 0 85vw !important;
-    max-width: 340px !important;
-    scroll-snap-align: start !important;
+    width: 100% !important;
+    max-width: none !important;
   }
 
   /* Full-width tappable CTA buttons */

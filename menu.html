@@ -39,6 +39,7 @@
       color: var(--ink);
       line-height: 1.6;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     /* ── Container ── */
@@ -132,6 +133,30 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .menu-toggle { display: block; }
+      .nav-row { gap: .9rem; padding: .75rem 0; }
+      .nav-cta { gap: .5rem; flex-shrink: 0; }
+      .nav-cta .btn-find { display: none; }
+      .btn-action { padding: .55rem .9rem; font-size: .78rem; }
+      .mobile-open .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        padding: 1rem;
+        border-bottom: 1px solid var(--line);
+        gap: .85rem;
+        max-height: calc(100vh - 88px);
+        overflow-y: auto;
+        box-shadow: 0 18px 34px -26px rgba(31, 26, 21, 0.34);
+      }
+      .mobile-open .nav-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+      }
     }
 
     /* ── Page intro ── */
@@ -152,6 +177,12 @@
       color: var(--muted);
       max-width: 50ch;
       margin-top: .5rem;
+    }
+    @media (max-width: 480px) {
+      .brand-logo img { height: 34px; }
+      .btn-action { padding: .52rem .82rem; font-size: .75rem; }
+      .menu-intro { padding: 2.25rem 0 1.5rem; }
+      .menu-intro p { font-size: .94rem; }
     }
 
     /* ── Filter chips ── */
@@ -231,6 +262,14 @@
     }
     @media (max-width: 960px) { .hits-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px) { .hits-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 520px) {
+      .hit-tag {
+        top: 16px;
+        left: 16px;
+        max-width: calc(100% - 32px);
+        font-size: .64rem;
+      }
+    }
 
     .hit-card {
       background: #fff;
@@ -569,6 +608,7 @@
       padding-bottom: env(safe-area-inset-bottom);
     }
     @media (max-width: 768px) { .mobile-bar { display: flex; } }
+    @media (max-width: 768px) { body { padding-bottom: 86px; } }
     .mobile-bar a {
       flex: 1;
       display: flex;
@@ -587,6 +627,10 @@
     .mobile-bar a.primary { background: var(--action); }
     .mobile-bar a.primary svg { color: var(--cream); }
     .mobile-bar a[aria-current] { color: var(--saffron); }
+    @media (max-width: 480px) {
+      .mobile-bar { gap: .3rem; }
+      .mobile-bar a { min-width: 0; padding: .58rem .3rem; font-size: .62rem; }
+    }
 
     /* ════════════════════════════════════
        ROTI BUILDER — CAVA-style
@@ -1552,6 +1596,33 @@
 <script src="scripts/nav-scroll.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="scripts/supabase-client.js"></script>
+<script>
+  (function () {
+    const header = document.querySelector('.site-header');
+    const toggle = document.querySelector('.menu-toggle');
+    if (!header || !toggle) return;
+
+    const setOpen = (open) => {
+      header.classList.toggle('mobile-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    setOpen(false);
+
+    toggle.addEventListener('click', () => {
+      setOpen(!header.classList.contains('mobile-open'));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!header.classList.contains('mobile-open')) return;
+      if (!header.contains(event.target)) setOpen(false);
+    });
+
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+  })();
+</script>
 
 </body>
 </html>
