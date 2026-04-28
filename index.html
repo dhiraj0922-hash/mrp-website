@@ -2341,6 +2341,75 @@ p { margin: 0 0 1em; }
   transform: scale(var(--card-media-scale-hover, 1.04));
 }
 
+.most-ordered .mo-grid > .hit-card .hit-topline {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 10;
+  display: block;
+  pointer-events: none;
+}
+
+.most-ordered .mo-grid > .hit-card .hit-topline .hit-tag,
+.most-ordered .mo-grid > .hit-card .hit-topline .hit-heat {
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 0;
+  font-size: .66rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.most-ordered .mo-grid > .hit-card .hit-topline .hit-tag {
+  max-width: min(72%, 230px);
+  padding: .42rem .76rem;
+  gap: 7px;
+}
+
+.most-ordered .mo-grid > .hit-card[data-item="Chicken Dum Biryani"] .hit-topline .hit-tag.safe {
+  min-width: 124px;
+  justify-content: center;
+}
+
+.most-ordered .mo-grid > .hit-card .hit-topline .hit-heat {
+  display: none;
+}
+
+.most-ordered .mo-grid > .hit-card .hit-topline .hit-tag .tdot {
+  margin-top: 0;
+}
+
+.most-ordered .mo-grid > .hit-card .hit-topline .hit-heat .mini-flame {
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .most-ordered .mo-grid > .hit-card .hit-topline {
+    left: 16px;
+    top: 16px;
+  }
+
+  .most-ordered .mo-grid > .hit-card .hit-topline .hit-tag,
+  .most-ordered .mo-grid > .hit-card .hit-topline .hit-heat {
+    min-height: 28px;
+    font-size: .62rem;
+  }
+
+  .most-ordered .mo-grid > .hit-card .hit-topline .hit-tag {
+    max-width: min(74%, 210px);
+    padding: .38rem .66rem;
+  }
+
+  .most-ordered .mo-grid > .hit-card[data-item="Chicken Dum Biryani"] .hit-topline .hit-tag.safe {
+    min-width: 118px;
+  }
+}
+
 /* Behavioral tag — top-left corner, one per card (usually) */
 .hit-tag {
   position: absolute;
@@ -4181,8 +4250,9 @@ p { margin: 0 0 1em; }
 
       <article class="hit-card" data-item="Butter Chicken Roti">
         <div class="hit-photo">
-          <span class="hit-tag most-ordered"><span class="tdot"></span>Most Ordered Today</span>
-          <span class="hit-heat"><span class="mini-flame on"></span><span class="mini-flame on"></span><span class="mini-flame"></span><span class="mini-flame"></span><span class="mini-flame"></span> Mild</span>
+          <div class="hit-topline">
+            <span class="hit-tag most-ordered"><span class="tdot"></span>Most Ordered Today</span>
+          </div>
           <img src="assets/butter-chicken-roti.jpg" alt="Butter Chicken Roti — golden roti wrap with creamy butter chicken filling" loading="lazy">
         </div>
                 
@@ -4206,8 +4276,9 @@ p { margin: 0 0 1em; }
 
       <article class="hit-card" data-item="Chicken Dum Biryani">
         <div class="hit-photo">
-          <span class="hit-tag safe"><span class="tdot"></span>Safe Choice</span>
-          <span class="hit-heat"><span class="mini-flame on"></span><span class="mini-flame on"></span><span class="mini-flame on"></span><span class="mini-flame"></span><span class="mini-flame"></span> Medium</span>
+          <div class="hit-topline">
+            <span class="hit-tag safe"><span class="tdot"></span>Safe Choice</span>
+          </div>
           <img src="assets/chicken-biryani.jpg" alt="Chicken Dum Biryani — saffron basmati rice with tender chicken and whole spices" loading="lazy">
         </div>
                 
@@ -4230,8 +4301,9 @@ p { margin: 0 0 1em; }
 
       <article class="hit-card vegan-card" data-item="Chole Chawal">
         <div class="hit-photo">
-          <span class="hit-tag vegan" style="background: var(--leaf); color: var(--cream);"><span class="tdot" style="background: #a8d08d;"></span>Vegan Favorite</span>
-          <span class="hit-heat"><span class="mini-flame on"></span><span class="mini-flame on"></span><span class="mini-flame"></span><span class="mini-flame"></span><span class="mini-flame"></span> Mild</span>
+          <div class="hit-topline">
+            <span class="hit-tag vegan" style="background: var(--leaf); color: var(--cream);"><span class="tdot" style="background: #a8d08d;"></span>Vegan Favorite</span>
+          </div>
           <img src="assets/chole-chawal.jpg" alt="Chole Chawal — North Indian chickpea curry with basmati rice" loading="lazy">
         </div>
                 
@@ -4254,8 +4326,9 @@ p { margin: 0 0 1em; }
 
       <article class="hit-card" data-item="Butter Chicken Poutine">
         <div class="hit-photo">
-          <span class="hit-tag late-night"><span class="tdot"></span>Late Night Pick</span>
-          <span class="hit-heat"><span class="mini-flame on"></span><span class="mini-flame on"></span><span class="mini-flame"></span><span class="mini-flame"></span><span class="mini-flame"></span> Mild</span>
+          <div class="hit-topline">
+            <span class="hit-tag late-night"><span class="tdot"></span>Late Night Pick</span>
+          </div>
           <img src="assets/butter-chicken-poutine.jpg" alt="Butter Chicken Poutine — crispy fries with butter chicken sauce and melted cheese" loading="lazy">
         </div>
                 

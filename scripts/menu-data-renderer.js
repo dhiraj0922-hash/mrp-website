@@ -80,7 +80,8 @@
     return `<div class="upsell-line"><button type="button"${btnClass}>${escapeHtml(item.upsellLabel)}</button><span class="upsell-line-price">+${item.upsellPrice ? '$' + Number(item.upsellPrice).toFixed(0) : ''}</span><span class="upsell-line-note">· ${escapeHtml(item.upsellNote || item.upsellText || '')}</span></div>`;
   };
 
-  const renderIndexHitCard = (item, modalMode) => {
+  const renderIndexHitCard = (item, modalMode, options = {}) => {
+    const showHeat = options.showHeat !== false;
     const filters = Array.isArray(item.filters) ? item.filters.filter((filterName) => filterName !== 'all').join(' ') : '';
     const addControl = modalMode
       ? `<button type="button" class="hit-add add-btn cart-add-btn" data-item-id="${escapeHtml(item.id)}" data-item-kind="${escapeHtml(item.kind || 'menu')}" data-item-name="${escapeHtml(item.name)}" data-item-price="${escapeHtml(item.price)}" data-upsell="${escapeHtml(item.addUpsellPrompt || item.upsellText || '')}" data-order-url="${escapeHtml(ORDER_URL)}">Add →</button>`
@@ -88,7 +89,7 @@
     const nr1 = item.badges && item.badges[1] ? `<span class="nr1-badge">${escapeHtml(item.badges[1])}</span>` : '';
     const cardClass = item.id === 'chole-chawal' && modalMode ? ' vegan-card' : '';
     const desc = modalMode ? (item.homepageDescription || item.description) : (item.sectionDescription || item.homepageDescription || item.description);
-    return `<article class="hit-card${cardClass}" data-item="${escapeHtml(item.name)}" data-item-id="${escapeHtml(item.id || '')}" data-filters="${escapeHtml(filters)}"><div class="hit-photo">${renderHitTag(item)}${renderHeat(item)}${renderImageOrArt(item)}</div><div class="hit-body">${nr1}<h3>${escapeHtml(item.name)}</h3><p class="hit-benefit">✓ ${escapeHtml(desc)}</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">${formatPrice(item.price)}</span>${addControl}</div>${renderUpsellLine(item, modalMode)}</div></div></article>`;
+    return `<article class="hit-card${cardClass}" data-item="${escapeHtml(item.name)}" data-item-id="${escapeHtml(item.id || '')}" data-filters="${escapeHtml(filters)}"><div class="hit-photo">${renderHitTag(item)}${showHeat ? renderHeat(item) : ''}${renderImageOrArt(item)}</div><div class="hit-body">${nr1}<h3>${escapeHtml(item.name)}</h3><p class="hit-benefit">✓ ${escapeHtml(desc)}</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">${formatPrice(item.price)}</span>${addControl}</div>${renderUpsellLine(item, modalMode)}</div></div></article>`;
   };
 
   const renderComboCard = (item) => {
@@ -126,7 +127,7 @@
     const popularGrid = document.querySelector('#menu .mo-grid');
     if (popularGrid) {
       const popularItems = findItems(items, view.popular);
-      popularGrid.innerHTML = popularItems.map((item) => renderIndexHitCard(item, true)).join('');
+      popularGrid.innerHTML = popularItems.map((item) => renderIndexHitCard(item, true, { showHeat: false })).join('');
     }
 
     const comboGrid = document.querySelector('#combos .combo-grid');
