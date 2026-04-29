@@ -278,6 +278,9 @@ p { margin: 0 0 1em; }
   .nav-row { gap: 1rem; padding: .8rem 0; }
   .nav-cta { gap: .55rem; flex-shrink: 0; }
   .nav-cta .btn-primary { padding: .72rem 1rem; font-size: .82rem; }
+  .nav-cta .btn-call { padding: .72rem .95rem; font-size: .82rem; }
+  .btn-call .call-full { display: none; }
+  .btn-call .call-short { display: inline; }
   .brand-logo { flex: 1 1 auto; min-width: 0; }
   .mobile-open .nav-links {
     display: flex; flex-direction: column;
@@ -331,6 +334,7 @@ p { margin: 0 0 1em; }
     font-size: .74rem;
     min-width: 0;
   }
+  .nav-cta .btn-call { padding: .64rem .84rem; font-size: .74rem; }
   .menu-toggle { flex-basis: 30px; width: 30px; height: 30px; }
   .hero-v2 h1 {
     font-size: clamp(2.3rem, 11vw, 3.2rem);
@@ -2350,7 +2354,7 @@ p { margin: 0 0 1em; }
    One primary per viewport. Never stack three equal-weight buttons.
    ============================================================ */
 
-.btn-action, .btn-delivery, .btn-find {
+.btn-action, .btn-delivery, .btn-find, .btn-call {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2410,13 +2414,26 @@ p { margin: 0 0 1em; }
   color: var(--cream);
   transform: translateY(-1px);
 }
+.btn-call {
+  background: rgba(242, 182, 72, 0.14);
+  color: var(--charcoal);
+  border: 1.5px solid rgba(122, 29, 20, 0.16);
+  padding: .8rem 1rem;
+  font-size: .9rem;
+}
+.btn-call:hover {
+  background: rgba(242, 182, 72, 0.24);
+  color: var(--charcoal);
+  transform: translateY(-1px);
+}
+.btn-call .call-short { display: none; }
 
 /* Arrow that slides on hover — subtle feedback */
-.btn-action .arr, .btn-delivery .arr, .btn-find .arr {
+.btn-action .arr, .btn-delivery .arr, .btn-find .arr, .btn-call .arr {
   display: inline-block;
   transition: transform .2s ease;
 }
-.btn-action:hover .arr, .btn-delivery:hover .arr, .btn-find:hover .arr {
+.btn-action:hover .arr, .btn-delivery:hover .arr, .btn-find:hover .arr, .btn-call:hover .arr {
   transform: translateX(3px);
 }
 
@@ -4232,7 +4249,7 @@ p { margin: 0 0 1em; }
 
 <!-- Trust bar -->
 <div class="trust-bar">
-  <span class="pip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.4h7.6z"/></svg><strong>4.6★</strong> · 28,000+ reviews</span>
+  <span class="pip"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.4h7.6z"/></svg><strong>Fresh</strong> on the tawa since 2018</span>
   <span class="pip hide-mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Pickup in <strong>~15 min</strong></span>
   <span class="pip hide-mobile"><strong>4 stores</strong> open past midnight</span>
   <span class="pip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.78.59 2.63a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.45-1.25a2 2 0 0 1 2.11-.45c.85.27 1.73.47 2.63.59A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+16473503672">(647) 350-3672</a></span>
@@ -4263,6 +4280,7 @@ p { margin: 0 0 1em; }
         <li><a href="catering.html">Catering</a></li>
       </ul>
       <div class="nav-cta">
+        <a href="tel:+16473503672" class="btn-call"><span class="call-full">Call (647) 350-3672</span><span class="call-short">Call Now</span></a>
         <a href="locations.html" class="btn-find">Find Store</a>
         <a href="https://myrotiplace.bycalibre.ca/" class="btn-action">Order Pickup <span class="arr">→</span></a>
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -5186,7 +5204,7 @@ p { margin: 0 0 1em; }
     <a class="mobile-menu-sheet-link" href="locations.html">Locations</a>
     <a class="mobile-menu-sheet-link" href="late-night.html">Late Night</a>
     <a class="mobile-menu-sheet-link" href="catering.html">Catering</a>
-    <a class="mobile-menu-sheet-link" href="tel:+16473503672">Call (647) 350-3672</a>
+    <a class="mobile-menu-sheet-link" href="tel:+16473503672">Call Now</a>
   </div>
 </div>
 
