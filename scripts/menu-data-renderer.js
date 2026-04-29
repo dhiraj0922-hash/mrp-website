@@ -40,11 +40,8 @@
 
   const renderImageOrArt = (item) => {
     const alt = escapeHtml(item.name || 'Menu item');
-    const fallbackArt = item.artKey && ART_MAP[item.artKey]
-      ? ART_MAP[item.artKey].replace('<svg ', '<svg hidden class="art-fallback-svg" ')
-      : '';
     if (item.image) {
-      return `<img src="${escapeHtml(item.image)}" alt="${alt}" loading="lazy" onerror="this.hidden=true;if(this.nextElementSibling){this.nextElementSibling.hidden=false;}">${fallbackArt}`;
+      return `<img src="${escapeHtml(item.image)}" alt="${alt}" loading="lazy">`;
     }
     if (item.artKey && ART_MAP[item.artKey]) {
       return ART_MAP[item.artKey];
