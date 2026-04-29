@@ -156,8 +156,8 @@
       "name": "Chicken Dum Biryani",
       "category": "Biryani",
       "description": "Saffron basmati, slow-cooked dum style. Raita and gulab jamun included.",
-      "homepageDescription": "Loaded. Filling. Worth every bite.",
-      "sectionDescription": "Sealed, fragrant, and loaded with tender chicken.",
+      "homepageDescription": "Saffron basmati, slow-cooked dum style. Raita and gulab jamun included.",
+      "sectionDescription": "Saffron basmati, slow-cooked dum style. Raita and gulab jamun included.",
       "price": 16.49,
       "image": "assets/chicken-biryani.jpg",
       "badges": [
@@ -177,7 +177,7 @@
       ],
       "heatLabel": "Medium",
       "heatLevel": 3,
-      "menuPageDescription": "Saffron basmati, slow-cooked dum style. Raita & gulab jamun included.",
+      "menuPageDescription": "Saffron basmati, slow-cooked dum style. Raita and gulab jamun included.",
       "menuPageTag": null
     },
     {
@@ -186,8 +186,8 @@
       "name": "Chole Chawal",
       "category": "Vegan Picks",
       "description": "Bold North Indian chickpea curry on basmati rice.",
-      "homepageDescription": "Clean. Protein-packed. Comfort meal.",
-      "sectionDescription": "Protein-packed comfort with clean spice.",
+      "homepageDescription": "Bold North Indian chickpea curry on basmati rice.",
+      "sectionDescription": "Bold North Indian chickpea curry on basmati rice.",
       "price": 11.99,
       "image": "assets/chole-chawal.jpg",
       "badges": [
@@ -217,9 +217,9 @@
       "kind": "menu",
       "name": "Butter Chicken Poutine",
       "category": "Apps & Hits",
-      "description": "Crispy fries buried in makhani sauce and melted cheese.",
-      "homepageDescription": "Cheesy. Saucy. Late-night hit.",
-      "sectionDescription": "Cheesy, saucy, and impossible to ignore.",
+      "description": "Crispy fries loaded with butter chicken, cheese, and bold masala comfort.",
+      "homepageDescription": "Crispy fries loaded with butter chicken, cheese, and bold masala comfort.",
+      "sectionDescription": "Crispy fries loaded with butter chicken, cheese, and bold masala comfort.",
       "price": 12.99,
       "image": "assets/butter-chicken-poutine.jpg",
       "badges": [
@@ -239,7 +239,7 @@
       ],
       "heatLabel": "Mild",
       "heatLevel": 2,
-      "menuPageDescription": "Crispy fries buried in makhani sauce and melted cheese.",
+      "menuPageDescription": "Crispy fries loaded with butter chicken, cheese, and bold masala comfort.",
       "menuPageTag": null
     },
     {
@@ -456,9 +456,9 @@
       "kind": "menu",
       "name": "Honey Garlic Cauliflower",
       "category": "Veggie Picks",
-      "description": "Crispy roasted cauliflower, sticky honey garlic glaze.",
-      "homepageDescription": "Crispy, sticky, and strong on repeat orders.",
-      "sectionDescription": "Sticky, crispy, and great for sharing.",
+      "description": "Crispy cauliflower tossed in sticky honey garlic sauce — impossible to ignore.",
+      "homepageDescription": "Crispy cauliflower tossed in sticky honey garlic sauce — impossible to ignore.",
+      "sectionDescription": "Crispy cauliflower tossed in sticky honey garlic sauce — impossible to ignore.",
       "price": 10.49,
       "image": "assets/honey-garlic-cauliflower.png",
       "badges": [
