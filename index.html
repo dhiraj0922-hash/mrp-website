@@ -34,6 +34,95 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://myrotiplace.com/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer delivery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can order pickup or delivery online through our ordering partner, depending on your location. You can also visit the nearest My Roti Place location page for ordering options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your meats halal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many customers ask us about halal options. Please call your nearest My Roti Place location before ordering so the team can confirm the current supplier and item availability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What spice levels do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most roti, bowl, and curry items can be customized from mild to spicy. If you are unsure, start with mild or medium. Vindaloo-style items are usually on the hotter side."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you cater for large groups or offices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. My Roti Place offers catering for office lunches, events, and group orders. For larger orders, we recommend contacting us in advance so the team can plan timing, packaging, and pickup or delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you cater for 50 people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We can prepare catering for 50 people or more with advance notice. Contact us with your date, guest count, pickup or delivery preference, and dietary needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the rotis made with eggs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our standard roti bread is typically not made with eggs, but recipes and suppliers can vary by item and location. If you have an allergy or dietary restriction, please confirm with the store before ordering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have vegetarian or vegan options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer vegetarian and vegan-friendly options such as tofu, chana, dal, veggie biryani, and plant-based sides. Please check the menu or ask the store team for the best current options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer gluten-free options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some bowls and rice-based items may be suitable for customers avoiding gluten, but our kitchen handles wheat-based roti and other allergens. Please speak with the store before ordering if you have an allergy or sensitivity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much notice do you need for catering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smaller catering orders may be possible with shorter notice, but 24 to 48 hours is recommended for office lunches and larger group orders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the nearest My Roti Place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Visit the Locations page to find the closest My Roti Place and choose your preferred pickup or delivery option."
+      }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -719,6 +808,99 @@ p { margin: 0 0 1em; }
   display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
   font-size: .85rem;
   color: rgba(246,239,226,.55);
+}
+
+.faq-section {
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+  background:
+    radial-gradient(circle at top left, rgba(242,182,72,.12), transparent 32%),
+    linear-gradient(180deg, rgba(237,227,206,.45) 0%, rgba(246,239,226,0) 100%);
+}
+.faq-shell {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 920px;
+}
+.faq-shell .section-head {
+  max-width: 62ch;
+}
+.faq-list {
+  display: grid;
+  gap: .9rem;
+}
+.faq-item {
+  border: 1px solid rgba(31,26,21,.12);
+  border-radius: 22px;
+  background: rgba(255,255,255,.7);
+  box-shadow: 0 20px 45px -35px rgba(31,26,21,.3);
+  overflow: hidden;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary span {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+.faq-item summary::after {
+  content: '+';
+  flex: 0 0 auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: rgba(158,43,31,.08);
+  color: var(--curry-red);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+.faq-item[open] summary::after {
+  content: '−';
+}
+.faq-answer {
+  padding: 0 1.25rem 1.2rem;
+  color: var(--muted);
+}
+.faq-answer p {
+  margin: 0;
+}
+.faq-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .85rem 1.2rem;
+  padding-top: .4rem;
+}
+.faq-cta p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+.faq-cta a {
+  font-weight: 700;
+}
+@media (max-width: 720px) {
+  .faq-item summary {
+    padding: 1rem 1rem;
+  }
+  .faq-answer {
+    padding: 0 1rem 1rem;
+  }
+  .faq-cta {
+    align-items: flex-start;
+  }
 }
 
 /* =========== Menu page =========== */
@@ -5063,6 +5245,63 @@ p { margin: 0 0 1em; }
   </div>
 </section>
 
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="faq-shell">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions before you <em>order?</em></h2>
+        <p>Quick answers about delivery, spice levels, catering, dietary questions, and finding the right My Roti Place near you.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary><span>Do you offer delivery?</span></summary>
+          <div class="faq-answer"><p>Yes. You can order pickup or delivery online through our ordering partner, depending on your location. You can also visit the nearest My Roti Place location page for ordering options.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Are your meats halal?</span></summary>
+          <div class="faq-answer"><p>Many customers ask us about halal options. Please call your nearest My Roti Place location before ordering so the team can confirm the current supplier and item availability.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>What spice levels do you offer?</span></summary>
+          <div class="faq-answer"><p>Most roti, bowl, and curry items can be customized from mild to spicy. If you are unsure, start with mild or medium. Vindaloo-style items are usually on the hotter side.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Do you cater for large groups or offices?</span></summary>
+          <div class="faq-answer"><p>Yes. My Roti Place offers catering for office lunches, events, and group orders. For larger orders, we recommend contacting us in advance so the team can plan timing, packaging, and pickup or delivery.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Can you cater for 50 people?</span></summary>
+          <div class="faq-answer"><p>Yes. We can prepare catering for 50 people or more with advance notice. Contact us with your date, guest count, pickup or delivery preference, and dietary needs.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Are the rotis made with eggs?</span></summary>
+          <div class="faq-answer"><p>Our standard roti bread is typically not made with eggs, but recipes and suppliers can vary by item and location. If you have an allergy or dietary restriction, please confirm with the store before ordering.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Do you have vegetarian or vegan options?</span></summary>
+          <div class="faq-answer"><p>Yes. We offer vegetarian and vegan-friendly options such as tofu, chana, dal, veggie biryani, and plant-based sides. Please check the menu or ask the store team for the best current options.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>Do you offer gluten-free options?</span></summary>
+          <div class="faq-answer"><p>Some bowls and rice-based items may be suitable for customers avoiding gluten, but our kitchen handles wheat-based roti and other allergens. Please speak with the store before ordering if you have an allergy or sensitivity.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>How much notice do you need for catering?</span></summary>
+          <div class="faq-answer"><p>Smaller catering orders may be possible with shorter notice, but 24 to 48 hours is recommended for office lunches and larger group orders.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span>How do I find the nearest My Roti Place?</span></summary>
+          <div class="faq-answer"><p>Visit the Locations page to find the closest My Roti Place and choose your preferred pickup or delivery option.</p></div>
+        </details>
+      </div>
+      <div class="faq-cta">
+        <p>Still have questions? <a href="tel:+14163665554">Call (416) 366-5554</a> or <a href="catering.html">send a catering request</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
@@ -5076,7 +5315,7 @@ p { margin: 0 0 1em; }
       </div>
       <div><h5>Order</h5><ul><li><a href="https://myrotiplace.bycalibre.ca/">Pickup</a></li><li><a href="https://myrotiplace.bycalibre.ca/">Delivery</a></li><li><a href="#menu">Menu</a></li></ul></div>
       <div><h5>Visit</h5><ul><li><a href="locations.html">All 14 Stores</a></li><li><a href="late-night.html">Late Night</a></li><li><a href="catering.html">Catering</a></li></ul></div>
-      <div><h5>About</h5><ul><li><a href="our-story.html">Chef KK</a></li><li><a href="press.html">Press</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h5>About</h5><ul><li><a href="our-story.html">Chef KK</a></li><li><a href="press.html">Press</a></li><li><a href="contact.html">Contact</a></li><li><a href="#faq">FAQ</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> My Roti Place.</span>
