@@ -601,6 +601,41 @@
       font-size: .82rem;
       margin-top: 4rem;
     }
+    .footer-follow {
+      margin-bottom: .85rem;
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .footer-socials {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      vertical-align: middle;
+      margin-left: .6rem;
+    }
+    .footer-socials a {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(246,239,226,.25);
+      border-radius: 999px;
+      color: var(--cream);
+      transition: all .2s ease;
+    }
+    .footer-socials a:hover {
+      background: var(--saffron);
+      color: var(--charcoal);
+      border-color: var(--saffron);
+    }
+    .footer-socials svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
     .site-footer a { color: var(--saffron); text-decoration: none; }
 
     /* ── Mobile bar ── */
@@ -1578,6 +1613,7 @@
 
 <!-- Footer -->
 <footer class="site-footer">
+  <div class="footer-follow">FOLLOW US <span class="footer-socials"><!-- Verify exact social handles before launch. --><a href="https://www.instagram.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a href="https://www.facebook.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4H16V5.5c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.3v2.5H9v2.8h2.1v7h2.4Z"/></svg></a></span></div>
   <p>© 2024 My Roti Place · Fresh on the tawa since 2018 · <a href="tel:+16473503672">(647) 350-3672</a> · <a href="our-story.html">Chef KK</a> · <a href="press.html">Press</a> · <a href="contact.html">Contact</a> · <a href="https://myrotiplace.bycalibre.ca/">Order Online</a></p>
 </footer>
 
