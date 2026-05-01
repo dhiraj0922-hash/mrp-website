@@ -96,6 +96,20 @@
     },
     {
       "@type": ["Restaurant", "LocalBusiness"],
+      "@id": "https://myrotiplace.com/locations.html#vaughan-major-mackenzie",
+      "name": "My Roti Place — Vaughan",
+      "url": "https://myrotiplace.com/locations.html#vaughan-major-mackenzie",
+      "telephone": "+1-647-350-3672",
+      "servesCuisine": ["Indian", "Roti", "Biryani"],
+      "priceRange": "$$",
+      "address": { "@type": "PostalAddress", "streetAddress": "1430 Major Mackenzie", "addressLocality": "Vaughan", "addressRegion": "ON", "addressCountry": "CA" },
+      "description": "Hours: Till midnight weekends.",
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=1430+Major+Mackenzie+Vaughan+ON",
+      "hasMenu": "https://myrotiplace.com/menu.html",
+      "potentialAction": { "@type": "OrderAction", "target": "https://myrotiplace.bycalibre.ca/" }
+    },
+    {
+      "@type": ["Restaurant", "LocalBusiness"],
       "@id": "https://myrotiplace.com/locations.html#weston-rd",
       "name": "My Roti Place — Weston Rd",
       "url": "https://myrotiplace.com/locations.html#weston-rd",
@@ -449,6 +463,8 @@ p { margin: 0 0 1em; }
 .loc-card-action.directions:hover { border-color: var(--saffron); color: var(--saffron); background: rgba(242,182,72,.08); }
 .loc-card-action.order { background: var(--curry-red); color: var(--cream); box-shadow: 0 10px 24px -12px rgba(215,48,32,.8); }
 .loc-card-action.order:hover { background: #c42a1d; color: var(--cream); transform: translateY(-1px); }
+.loc-card-action.call { border: 1px solid rgba(242,182,72,.22); color: var(--saffron); background: rgba(242,182,72,.06); }
+.loc-card-action.call:hover { border-color: var(--saffron); background: rgba(242,182,72,.14); color: var(--cream); }
 .late-v2 { background: #0F0A06; color: var(--cream); padding: clamp(4rem, 9vw, 8rem) 0 clamp(3rem, 7vw, 6rem); position: relative; overflow: hidden; }
 .late-v2::before { content: ''; position: absolute; top: -300px; right: -300px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(242, 182, 72, 0.15), transparent 65%); }
 .late-v2::after { content: ''; position: absolute; bottom: -200px; left: -200px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(215, 48, 32, 0.12), transparent 70%); }
@@ -605,6 +621,162 @@ p { margin: 0 0 1em; }
     </div>
   </div>
 </footer>
+<script id="locations-data" type="application/json">
+{
+  "locations": [
+    {
+      "id": "queens-quay",
+      "name": "Queens Quay",
+      "address": "12 Queens Quay W",
+      "hoursText": "8 AM – 4 AM daily",
+      "note": "Flagship",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=12+Queens+Quay+W+Toronto+ON"
+    },
+    {
+      "id": "queen-st-w",
+      "name": "Queen St W",
+      "address": "406 Queen St W",
+      "hoursText": "Open 24/7",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=406+Queen+St+W+Toronto+ON"
+    },
+    {
+      "id": "king-st-w",
+      "name": "King St W",
+      "address": "901 King St W",
+      "hoursText": "Open until 3 AM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=901+King+St+W+Toronto+ON"
+    },
+    {
+      "id": "bayview",
+      "name": "Bayview",
+      "address": "1574 Bayview Ave",
+      "hoursText": "8:30 AM – 2 AM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1574+Bayview+Ave+Toronto+ON"
+    },
+    {
+      "id": "kingston-rd",
+      "name": "Kingston Rd",
+      "address": "4525 Kingston Rd",
+      "hoursText": "11 AM – 12 AM Fri/Sat",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=4525+Kingston+Rd+Toronto+ON"
+    },
+    {
+      "id": "queen-st-e",
+      "name": "Queen St E",
+      "address": "948 Queen St E",
+      "hoursText": "11 AM – 10 PM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=948+Queen+St+E+Toronto+ON"
+    },
+    {
+      "id": "vaughan-major-mackenzie",
+      "name": "Vaughan",
+      "address": "1430 Major Mackenzie",
+      "hoursText": "Till midnight weekends",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1430+Major+Mackenzie+Vaughan+ON"
+    },
+    {
+      "id": "weston-rd",
+      "name": "Weston Rd",
+      "address": "70 Weston Road",
+      "hoursText": "Till midnight weekends",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=70+Weston+Road+Toronto+ON"
+    },
+    {
+      "id": "oshawa",
+      "name": "Oshawa",
+      "address": "77 King St E",
+      "hoursText": "Till midnight daily",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=77+King+St+E+Oshawa+ON"
+    },
+    {
+      "id": "square-one",
+      "name": "Square One",
+      "address": "100 City Centre Dr",
+      "hoursText": "10 AM – 9 PM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=100+City+Centre+Dr+Mississauga+ON"
+    },
+    {
+      "id": "london-on",
+      "name": "London ON",
+      "address": "849 Wellington",
+      "hoursText": "24 hrs weekends",
+      "note": "4.9★",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=849+Wellington+Road+London+ON"
+    },
+    {
+      "id": "dundas-mississauga",
+      "name": "Dundas Mississauga",
+      "address": "2458 Dundas St W",
+      "hoursText": "Till 4 AM daily",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=2458+Dundas+St+W+Mississauga+ON"
+    },
+    {
+      "id": "newmarket",
+      "name": "Newmarket",
+      "address": "1111 Davis Drive",
+      "hoursText": "Till 10 PM Fri/Sat",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1111+Davis+Drive+Newmarket+ON"
+    },
+    {
+      "id": "stoney-creek",
+      "name": "Stoney Creek",
+      "address": "1807 Stone Church Rd E",
+      "hoursText": "Till 12:30 AM",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1807+Stone+Church+Rd+E+Stoney+Creek+ON"
+    },
+    {
+      "id": "woodside-square",
+      "name": "Woodside Square",
+      "address": "1571 Sandhurst Circle",
+      "hoursText": "Inside the mall",
+      "note": "",
+      "isActive": true,
+      "orderUrl": "https://myrotiplace.bycalibre.ca/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=1571+Sandhurst+Circle+Toronto+ON"
+    }
+  ]
+}
+</script>
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 document.addEventListener('DOMContentLoaded', () => {
@@ -652,6 +824,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const locationsGrid = document.querySelector('[data-locations-grid]');
+  const embeddedLocationsData = document.getElementById('locations-data');
   const escapeHtml = (value) => String(value == null ? '' : value)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -663,17 +836,37 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `${escapeHtml(location.address)} — ${escapeHtml(location.note)}`
       : escapeHtml(location.address);
     const mapUrl = escapeHtml(location.mapsUrl || location.mapUrl || '#');
-    return `<article class="loc-card"><h4>${escapeHtml(location.name)}</h4><p><a href="${mapUrl}" class="loc-address" target="_blank" rel="noopener noreferrer">${addressLine}</a></p><p class="hrs">${escapeHtml(location.hoursText)}</p><div class="loc-card-actions"><a href="${mapUrl}" class="loc-card-action directions" target="_blank" rel="noopener noreferrer">Get Directions</a><a href="${escapeHtml(location.orderUrl)}" class="loc-card-action order">Order Pickup</a></div></article>`;
+    return `<article class="loc-card"><h4>${escapeHtml(location.name)}</h4><p><a href="${mapUrl}" class="loc-address" target="_blank" rel="noopener noreferrer">${addressLine}</a></p><p class="hrs">${escapeHtml(location.hoursText)}</p><div class="loc-card-actions"><a href="${mapUrl}" class="loc-card-action directions" target="_blank" rel="noopener noreferrer">Get Directions</a><a href="${escapeHtml(location.orderUrl)}" class="loc-card-action order">Order from this location</a><a href="tel:+16473503672" class="loc-card-action call">Call</a></div></article>`;
   };
+
+  function parseEmbeddedLocations() {
+    if (!embeddedLocationsData) return [];
+    try {
+      const data = JSON.parse(embeddedLocationsData.textContent || '{}');
+      return (data.locations || []).filter((location) => location && location.isActive !== false);
+    } catch (error) {
+      console.warn('MRP embedded locations parse failed:', error);
+      return [];
+    }
+  }
+
+  function renderLocations(locations) {
+    if (!locationsGrid) return;
+    locationsGrid.innerHTML = locations.map(renderLocationCard).join('');
+  }
 
   async function loadLocations() {
     if (!locationsGrid) return;
+    const embeddedLocations = parseEmbeddedLocations();
+    if (embeddedLocations.length) {
+      renderLocations(embeddedLocations);
+    }
     try {
       const response = await fetch('data/locations.json', { cache: 'no-store' });
       if (!response.ok) throw new Error(`Locations request failed: ${response.status}`);
       const data = await response.json();
-      const activeLocations = (data.locations || []).filter((location) => location && location.isActive);
-      locationsGrid.innerHTML = activeLocations.map(renderLocationCard).join('');
+      const activeLocations = (data.locations || []).filter((location) => location && location.isActive !== false);
+      renderLocations(activeLocations);
     } catch (error) {
       console.warn('MRP locations renderer fallback:', error);
     }
