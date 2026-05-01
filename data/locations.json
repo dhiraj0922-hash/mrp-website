@@ -6,7 +6,7 @@
       "address": "12 Queens Quay W",
       "hoursText": "8 AM – 4 AM daily",
       "note": "Flagship",
-      "isActive": true,
+      "isActive": false,
       "orderUrl": "https://myrotiplace.bycalibre.ca/",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=12+Queens+Quay+W+Toronto+ON"
     },
