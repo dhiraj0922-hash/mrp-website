@@ -1,5 +1,5 @@
 (function () {
-  const DATA_PATH = 'data/menu.json';
+  const DATA_PATH = '/data/menu.json';
   const ORDER_URL = 'https://myrotiplace.bycalibre.ca/';
 
   const ART_MAP = {
@@ -38,15 +38,46 @@
 
   const formatPrice = (value) => `$${Number(value).toFixed(2)}`;
 
+  const FALLBACK_IMG = '/assets/fallback-food.png';
+  const CARD_IMAGE_SELECTOR = '.hit-card img, .combo-card img';
+
+  const normalizeAssetPath = (value) => {
+    const raw = String(value == null ? '' : value).trim();
+    if (!raw) return '';
+    if (/^(https?:)?\/\//i.test(raw) || raw.startsWith('data:')) return raw;
+    if (raw.startsWith('/assets/')) return raw;
+    if (raw.startsWith('assets/')) return `/${raw}`;
+    if (!raw.startsWith('/')) return `/assets/${raw.replace(/^\.?\//, '')}`;
+    return raw;
+  };
+
+  const applyFallbackImage = (img) => {
+    if (!img || img.dataset.mrpFallbackBound === 'true') return;
+    const normalizedSrc = normalizeAssetPath(img.getAttribute('src'));
+    if (normalizedSrc) {
+      img.setAttribute('src', normalizedSrc);
+    }
+    img.dataset.mrpFallbackBound = 'true';
+    img.addEventListener('error', () => {
+      if (img.getAttribute('src') === FALLBACK_IMG) return;
+      img.setAttribute('src', FALLBACK_IMG);
+    });
+  };
+
+  const wireCardImageFallbacks = (root = document) => {
+    root.querySelectorAll(CARD_IMAGE_SELECTOR).forEach(applyFallbackImage);
+  };
+
   const renderImageOrArt = (item) => {
     const alt = escapeHtml(item.name || 'Menu item');
     if (item.image) {
-      return `<img src="${escapeHtml(item.image)}" alt="${alt}" loading="lazy">`;
+      const imagePath = escapeHtml(normalizeAssetPath(item.image));
+      return `<img src="${imagePath}" alt="${alt}" loading="lazy" onerror="this.onerror=null;this.src='${FALLBACK_IMG}'">`;
     }
     if (item.artKey && ART_MAP[item.artKey]) {
       return ART_MAP[item.artKey];
     }
-    return `<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#F6EFE2"></rect><circle cx="200" cy="150" r="90" fill="#E8A530"></circle></svg>`;
+    return `<img src="${FALLBACK_IMG}" alt="${alt}" loading="lazy">`;
   };
 
   const getToneClass = (tone) => {
@@ -216,6 +247,7 @@
   };
 
   const boot = async () => {
+    wireCardImageFallbacks(document);
     try {
       const response = await fetch(DATA_PATH, { cache: 'no-store' });
       if (!response.ok) throw new Error(`Menu data request failed: ${response.status}`);
@@ -223,9 +255,11 @@
       console.log(`[MRP menu] loaded ${Array.isArray(data.items) ? data.items.length : 0} items from ${DATA_PATH}`);
       renderIndexPage(data);
       renderMenuPage(data);
+      wireCardImageFallbacks(document);
       document.dispatchEvent(new CustomEvent('mrp-menu-rendered'));
     } catch (error) {
       console.warn('MRP menu renderer fallback:', error);
+      wireCardImageFallbacks(document);
     }
   };
 
