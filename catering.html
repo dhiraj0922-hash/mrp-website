@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Catering — My Roti Place</title>
 <meta name="description" content="My Roti Place catering for office lunches, parties, and group orders.">
-<link rel="icon" href="assets/mrp-logo.png">
+<link rel="icon" href="/assets/mrp-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -271,6 +271,42 @@ p { margin: 0 0 1em; }
 .footer-brand .footer-logo img { width: 100%; height: auto; display: block; }
 .footer-brand .brand-line { margin: 0; color: var(--cream); font-size: 1rem; font-weight: 700; line-height: 1.35; }
 .footer-brand p { color: rgba(246,239,226,.75); font-size: .95rem; max-width: 35ch; margin: 0; }
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: .75rem;
+  margin-top: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.social-icon-circle {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff33;
+  border-radius: 50%;
+  color: var(--cream);
+  background: transparent;
+  transition: border-color .2s ease, color .2s ease, transform .2s ease, background-color .2s ease;
+  flex: 0 0 auto;
+}
+.social-icon-circle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex: 0 0 auto;
+}
+.social-icon-circle:hover,
+.social-icon-circle:focus-visible {
+  border-color: #D4AF37;
+  color: #D4AF37;
+  transform: translateY(-1px);
+  outline: none;
+}
 @media (max-width: 720px) { .footer-brand .footer-logo { width: clamp(95px, 30vw, 120px); } }
 .footer-bottom { border-top: 1px solid rgba(246,239,226,.15); padding-top: 2rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .85rem; color: rgba(246,239,226,.55); }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .45; } }
@@ -373,7 +409,7 @@ p { margin: 0 0 1em; }
   <div class="container">
     <div class="nav-row">
       <a href="index.html" class="brand-logo" aria-label="Go to homepage" title="Home">
-        <img src="assets/mrp-logo.png" alt="My Roti Place logo" height="38">
+        <img src="/assets/mrp-logo.png" alt="My Roti Place logo" height="38">
       </a>
       <ul class="nav-links">
         <li class="menu-nav-item">
@@ -478,7 +514,7 @@ p { margin: 0 0 1em; }
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="footer-logo" aria-label="My Roti Place home">
-          <img src="assets/mrp-logo.png" alt="My Roti Place logo">
+          <img src="/assets/mrp-logo.png" alt="My Roti Place logo">
         </a>
         <p class="brand-line">Toronto's modern Indian roti house.</p>
         <p>Toronto's modern Indian roti, biryani & dosa. Open late. Fresh always. Direct ordering for quick pickup and easy reordering.</p>
@@ -486,7 +522,7 @@ p { margin: 0 0 1em; }
       <div><h5>Menu</h5><ul><li><a href="index.html#signature-rotis">Signature Rotis</a></li><li><a href="index.html#biryani">Biryani</a></li><li><a href="index.html#apps-hits">Apps &amp; Hits</a></li></ul></div>
       <div><h5>Visit</h5><ul><li><a href="locations.html">All 14 Locations</a></li><li><a href="late-night.html">Late Night</a></li><li><a href="catering.html">Catering</a></li></ul></div>
       <div><h5>About</h5><ul><li><a href="our-story.html">Chef KK</a></li><li><a href="press.html">Press</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h5>Follow us</h5><div class="socials"><!-- Verify exact social handles before launch. --><a href="https://www.instagram.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a href="https://www.facebook.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4H16V5.5c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.3v2.5H9v2.8h2.1v7h2.4Z"/></svg></a></div></div>
+      <div><h5>Follow us</h5><div class="socials"><!-- Verify exact social handles before launch. --><a class="social-icon-circle" href="https://www.instagram.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a class="social-icon-circle" href="https://www.facebook.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4H16V5.5c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.3v2.5H9v2.8h2.1v7h2.4Z"/></svg></a></div></div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> My Roti Place.</span>

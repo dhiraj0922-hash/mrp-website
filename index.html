@@ -6,7 +6,7 @@
 <title>Butter Chicken Roti Toronto — Pickup in 15 Min | My Roti Place</title>
 <meta name="description" content="Toronto's #1 roti. Chef KK's butter chicken roti, biryani, dosa. 14 Toronto + Ontario locations, 4 open past midnight. Order pickup or delivery — ready in ~15 minutes.">
 <link rel="canonical" href="https://myrotiplace.com/">
-<link rel="icon" href="assets/mrp-logo.png">
+<link rel="icon" href="/assets/mrp-logo.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -792,16 +792,41 @@ p { margin: 0 0 1em; }
 .footer-brand .brand-line { margin: 0; color: var(--cream); font-size: 1rem; font-weight: 700; line-height: 1.35; }
 .footer-brand p { color: rgba(246,239,226,.75); font-size: .95rem; max-width: 35ch; margin: 0; }
 @media (max-width: 720px) { .footer-brand .footer-logo { width: clamp(95px, 30vw, 120px); } }
-.socials { display: flex; gap: .75rem; margin-top: 1.25rem; }
-.socials a {
-  width: 38px; height: 38px;
-  display: inline-flex; align-items: center; justify-content: center;
-  border: 1px solid rgba(246,239,226,.25);
+.socials {
+  display: flex;
+  gap: .75rem;
+  margin-top: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.social-icon-circle {
+  width: clamp(38px, 5vw, 42px);
+  height: clamp(38px, 5vw, 42px);
+  padding: .6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(246,239,226,.38);
   border-radius: 999px;
   color: var(--cream);
-  transition: all .2s ease;
+  background: transparent;
+  transition: border-color .2s ease, color .2s ease, transform .2s ease, background-color .2s ease;
+  flex: 0 0 auto;
 }
-.socials a:hover { background: var(--saffron); color: var(--charcoal); border-color: var(--saffron); }
+.social-icon-circle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex: 0 0 auto;
+}
+.social-icon-circle:hover,
+.social-icon-circle:focus-visible {
+  border-color: #D4AF37;
+  color: #D4AF37;
+  transform: translateY(-1px);
+  outline: none;
+}
 .footer-bottom {
   border-top: 1px solid rgba(246,239,226,.15);
   padding-top: 2rem;
@@ -4453,7 +4478,7 @@ p { margin: 0 0 1em; }
   <div class="container">
     <div class="nav-row">
       <a href="index.html" class="brand-logo" aria-label="Go to homepage" title="Home">
-        <img src="assets/mrp-logo.png" alt="My Roti Place logo" height="38">
+        <img src="/assets/mrp-logo.png" alt="My Roti Place logo" height="38">
       </a>
       <ul class="nav-links">
         <li class="menu-nav-item">
@@ -4490,7 +4515,7 @@ p { margin: 0 0 1em; }
   <div class="container">
     <!-- Logo watermark behind h1 -->
     <div class="hero-logo-wm" aria-hidden="true">
-      <img src="assets/mrp-logo.png" alt="">
+      <img src="/assets/mrp-logo.png" alt="">
     </div>
     <div class="hero-v2-grid">
       <div>
@@ -4530,9 +4555,9 @@ p { margin: 0 0 1em; }
 
       <!-- RIGHT: video panel -->
       <div class="hero-img-panel">
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/butter-chicken-roti.jpg" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="metadata" poster="/assets/butter-chicken-roti.jpg" aria-hidden="true">
           <source src="video/roti-pour.mp4" type="video/mp4">
-          <img src="assets/butter-chicken-roti.jpg" alt="Butter Chicken Roti — My Roti Place">
+          <img src="/assets/butter-chicken-roti.jpg" alt="Butter Chicken Roti — My Roti Place">
         </video>
         <div class="steam" aria-hidden="true">
           <span></span><span></span><span></span><span></span><span></span>
@@ -4628,7 +4653,7 @@ p { margin: 0 0 1em; }
           <div class="hit-topline">
             <span class="hit-tag most-ordered"><span class="tdot"></span>Most Ordered Today</span>
           </div>
-          <img src="assets/butter-chicken-roti.jpg" alt="Butter Chicken Roti — golden roti wrap with creamy butter chicken filling" loading="lazy">
+          <img src="/assets/butter-chicken-roti.jpg" alt="Butter Chicken Roti — golden roti wrap with creamy butter chicken filling" loading="lazy">
         </div>
                 
         <div class="hit-body">
@@ -4654,7 +4679,7 @@ p { margin: 0 0 1em; }
           <div class="hit-topline">
             <span class="hit-tag safe"><span class="tdot"></span>Safe Choice</span>
           </div>
-          <img src="assets/chicken-biryani.jpg" alt="Chicken Dum Biryani — saffron basmati rice with tender chicken and whole spices" loading="lazy">
+          <img src="/assets/chicken-biryani.jpg" alt="Chicken Dum Biryani — saffron basmati rice with tender chicken and whole spices" loading="lazy">
         </div>
                 
         <div class="hit-body">
@@ -4679,7 +4704,7 @@ p { margin: 0 0 1em; }
           <div class="hit-topline">
             <span class="hit-tag vegan" style="background: var(--leaf); color: var(--cream);"><span class="tdot" style="background: #a8d08d;"></span>Vegan Favorite</span>
           </div>
-          <img src="assets/chole-chawal.jpg" alt="Chole Chawal — North Indian chickpea curry with basmati rice" loading="lazy">
+          <img src="/assets/chole-chawal.jpg" alt="Chole Chawal — North Indian chickpea curry with basmati rice" loading="lazy">
         </div>
                 
         <div class="hit-body">
@@ -4704,7 +4729,7 @@ p { margin: 0 0 1em; }
           <div class="hit-topline">
             <span class="hit-tag late-night"><span class="tdot"></span>Late Night Pick</span>
           </div>
-          <img src="assets/butter-chicken-poutine.jpg" alt="Butter Chicken Poutine — crispy fries with butter chicken sauce and melted cheese" loading="lazy">
+          <img src="/assets/butter-chicken-poutine.jpg" alt="Butter Chicken Poutine — crispy fries with butter chicken sauce and melted cheese" loading="lazy">
         </div>
                 
         <div class="hit-body">
@@ -4746,7 +4771,7 @@ p { margin: 0 0 1em; }
       <article class="combo-card featured">
         <div class="combo-photo">
           <span class="combo-intent solo">Solo</span>
-          <img src="assets/kk-classic.png" alt="KK Classic" loading="lazy">
+          <img src="/assets/kk-classic.png" alt="KK Classic" loading="lazy">
         </div>
         <div class="combo-card-body">
           <h3>The KK Classic</h3>
@@ -4772,7 +4797,7 @@ p { margin: 0 0 1em; }
       <article class="combo-card">
         <div class="combo-photo">
           <span class="combo-intent value">Big Eater</span>
-          <img src="assets/90-second-biryani.png" alt="Chicken Dum Biryani Combo" loading="lazy">
+          <img src="/assets/90-second-biryani.png" alt="Chicken Dum Biryani Combo" loading="lazy">
         </div>
         <div class="combo-card-body">
           <h3>The Big Plate</h3>
@@ -4798,7 +4823,7 @@ p { margin: 0 0 1em; }
       <article class="combo-card">
         <div class="combo-photo">
           <span class="combo-intent vegan">Vegan</span>
-          <img src="assets/vegan-hero.png" alt="Vegan Hero" loading="lazy">
+          <img src="/assets/vegan-hero.png" alt="Vegan Hero" loading="lazy">
         </div>
         <div class="combo-card-body">
           <h3>The Vegan Hero</h3>
@@ -4824,7 +4849,7 @@ p { margin: 0 0 1em; }
       <article class="combo-card">
         <div class="combo-photo">
           <span class="combo-intent late">🌙 Late Night</span>
-          <img src="assets/2am-pack.png" alt="2 AM Pack" loading="lazy">
+          <img src="/assets/2am-pack.png" alt="2 AM Pack" loading="lazy">
         </div>
         <div class="combo-card-body">
           <h3>The 2 AM Pack</h3>
@@ -4850,7 +4875,7 @@ p { margin: 0 0 1em; }
       <article class="combo-card">
         <div class="combo-photo">
           <span class="combo-intent spicy">🔥 Bring Heat</span>
-          <img src="assets/lamb-combo.png" alt="Spice Seeker" loading="lazy">
+          <img src="/assets/lamb-combo.png" alt="Spice Seeker" loading="lazy">
         </div>
         <div class="combo-card-body">
           <h3>The Spice Seeker</h3>
@@ -4876,7 +4901,7 @@ p { margin: 0 0 1em; }
       <article class="combo-card">
         <div class="combo-photo">
           <span class="combo-intent family">Family · 4</span>
-          <img src="assets/family-feast.png" alt="Family Feast" loading="lazy">
+          <img src="/assets/family-feast.png" alt="Family Feast" loading="lazy">
         </div>
         <div class="combo-card-body">
           <h3>The Family Feast</h3>
@@ -4927,7 +4952,7 @@ p { margin: 0 0 1em; }
       <article class="hit-card" data-item="Butter Chicken Roti Signature">
         <div class="hit-photo">
           <span class="hit-tag most-ordered"><span class="tdot"></span>Most Ordered</span>
-          <img src="assets/butter-chicken-roti.jpg" alt="Butter Chicken Roti" loading="lazy">
+          <img src="/assets/butter-chicken-roti.jpg" alt="Butter Chicken Roti" loading="lazy">
         </div>
         <div class="hit-body">
           <h3>Butter Chicken Roti</h3>
@@ -4944,7 +4969,7 @@ p { margin: 0 0 1em; }
       <article class="hit-card" data-item="Chicken Tikka Roti">
         <div class="hit-photo">
           <span class="hit-tag safe"><span class="tdot"></span>Safe Choice</span>
-          <img src="assets/chicken-tikka-roti.png" alt="Chicken Tikka Roti" loading="lazy">
+          <img src="/assets/chicken-tikka-roti.png" alt="Chicken Tikka Roti" loading="lazy">
         </div>
         <div class="hit-body">
           <h3>Chicken Tikka Roti</h3>
@@ -5011,15 +5036,15 @@ p { margin: 0 0 1em; }
     </div>
     <div class="mo-grid">
       <article class="hit-card">
-        <div class="hit-photo"><span class="hit-tag safe"><span class="tdot"></span>Best Seller</span><img src="assets/chicken-biryani.jpg" alt="Chicken Dum Biryani" loading="lazy"></div>
+        <div class="hit-photo"><span class="hit-tag safe"><span class="tdot"></span>Best Seller</span><img src="/assets/chicken-biryani.jpg" alt="Chicken Dum Biryani" loading="lazy"></div>
         <div class="hit-body"><h3>Chicken Dum Biryani</h3><p class="hit-benefit">✓ Saffron basmati, slow-cooked dum style. Raita and gulab jamun included.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$16.49</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Raita</button><span class="upsell-line-price">+$3</span><span class="upsell-line-note">· cools the spice</span></div></div></div>
       </article>
       <article class="hit-card">
-        <div class="hit-photo"><span class="hit-tag late-night"><span class="tdot"></span>Bring Heat</span><img src="assets/chicken-hyderabadi-dum-biryani.png" alt="Hyderabadi Biryani" loading="lazy"></div>
+        <div class="hit-photo"><span class="hit-tag late-night"><span class="tdot"></span>Bring Heat</span><img src="/assets/chicken-hyderabadi-dum-biryani.png" alt="Hyderabadi Biryani" loading="lazy"></div>
         <div class="hit-body"><h3>Hyderabadi Dum Biryani</h3><p class="hit-benefit">✓ Deeper spice, richer aroma, longer finish.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$17.49</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Butter roti</button><span class="upsell-line-price">+$2</span><span class="upsell-line-note">· goes with everything</span></div></div></div>
       </article>
       <article class="hit-card">
-        <div class="hit-photo"><span class="hit-tag"><span class="tdot"></span>Premium Pick</span><img src="assets/lamb-biryani.png" alt="Lamb Biryani" loading="lazy"></div>
+        <div class="hit-photo"><span class="hit-tag"><span class="tdot"></span>Premium Pick</span><img src="/assets/lamb-biryani.png" alt="Lamb Biryani" loading="lazy"></div>
         <div class="hit-body"><h3>Lamb Biryani</h3><p class="hit-benefit">✓ Slow-cooked lamb and bold spice depth.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$17.99</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Gulab Jamun</button><span class="upsell-line-price">+$4</span><span class="upsell-line-note">· sweet contrast</span></div></div></div>
       </article>
     </div>
@@ -5034,8 +5059,8 @@ p { margin: 0 0 1em; }
       <p>Crispy, shareable sides and drinks that make your meal complete.</p>
     </div>
     <div class="mo-grid">
-      <article class="hit-card"><div class="hit-photo"><span class="hit-tag late-night"><span class="tdot"></span>Late Night Pick</span><img src="assets/butter-chicken-poutine.jpg" alt="Butter Chicken Poutine" loading="lazy"></div><div class="hit-body"><h3>Butter Chicken Poutine</h3><p class="hit-benefit">✓ Crispy fries loaded with butter chicken, cheese, and bold masala comfort.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$12.99</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Cold drink</button><span class="upsell-line-price">+$3</span><span class="upsell-line-note">· late-night combo</span></div></div></div></article>
-      <article class="hit-card"><div class="hit-photo"><span class="hit-tag vegan" style="background:var(--leaf);color:var(--cream);"><span class="tdot" style="background:#a8d08d;"></span>Vegan Favorite</span><img src="assets/honey-garlic-cauliflower.png" alt="Honey Garlic Cauliflower" loading="lazy"></div><div class="hit-body"><h3>Honey Garlic Cauliflower</h3><p class="hit-benefit">✓ Crispy cauliflower tossed in sticky honey garlic sauce — impossible to ignore.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$10.49</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Mango Lassi</button><span class="upsell-line-price">+$3</span><span class="upsell-line-note">· balances sweet heat</span></div></div></div></article>
+      <article class="hit-card"><div class="hit-photo"><span class="hit-tag late-night"><span class="tdot"></span>Late Night Pick</span><img src="/assets/butter-chicken-poutine.jpg" alt="Butter Chicken Poutine" loading="lazy"></div><div class="hit-body"><h3>Butter Chicken Poutine</h3><p class="hit-benefit">✓ Crispy fries loaded with butter chicken, cheese, and bold masala comfort.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$12.99</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Cold drink</button><span class="upsell-line-price">+$3</span><span class="upsell-line-note">· late-night combo</span></div></div></div></article>
+      <article class="hit-card"><div class="hit-photo"><span class="hit-tag vegan" style="background:var(--leaf);color:var(--cream);"><span class="tdot" style="background:#a8d08d;"></span>Vegan Favorite</span><img src="/assets/honey-garlic-cauliflower.png" alt="Honey Garlic Cauliflower" loading="lazy"></div><div class="hit-body"><h3>Honey Garlic Cauliflower</h3><p class="hit-benefit">✓ Crispy cauliflower tossed in sticky honey garlic sauce — impossible to ignore.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$10.49</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Mango Lassi</button><span class="upsell-line-price">+$3</span><span class="upsell-line-note">· balances sweet heat</span></div></div></div></article>
       <article class="hit-card"><div class="hit-photo"><span class="hit-tag"><span class="tdot"></span>Street Favorite</span><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#E8A530"/><circle cx="125" cy="145" r="55" fill="#C4861C"/><circle cx="205" cy="145" r="55" fill="#D89A45"/><circle cx="285" cy="145" r="55" fill="#E2AF59"/></svg></div><div class="hit-body"><h3>Pani Puri</h3><p class="hit-benefit">✓ Crunchy, tangy, and fast-shareable.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$7.99</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Samosa</button><span class="upsell-line-price">+$6</span><span class="upsell-line-note">· shareable pair</span></div></div></div></article>
       <article class="hit-card"><div class="hit-photo"><span class="hit-tag"><span class="tdot"></span>Snack Add-On</span><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#F6EFE2"/><path d="M110 210L180 70L250 210H110Z" fill="#D89A45"/><path d="M180 220L255 95L330 220H180Z" fill="#E2AF59"/></svg></div><div class="hit-body"><h3>Samosa (2 pcs)</h3><p class="hit-benefit">✓ Crisp pastry and classic potato filling.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$5.99</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Tamarind dip</button><span class="upsell-line-price">+$1</span><span class="upsell-line-note">· easy yes</span></div></div></div></article>
     </div>
@@ -5050,8 +5075,8 @@ p { margin: 0 0 1em; }
       <p>Fresh, satisfying vegetarian and vegan favorites made with bold sauces, hearty fillings, and serious comfort.</p>
     </div>
     <div class="mo-grid">
-      <article class="hit-card"><div class="hit-photo"><span class="hit-tag vegan" style="background:var(--leaf);color:var(--cream);"><span class="tdot" style="background:#a8d08d;"></span>Vegan Favorite</span><img src="assets/chole-chawal.jpg" alt="Chole Chawal" loading="lazy"></div><div class="hit-body"><h3>Chole Chawal</h3><p class="hit-benefit">✓ Bold North Indian chickpea curry on basmati rice.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$9.99</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Butter roti</button><span class="upsell-line-price">+$2</span><span class="upsell-line-note">· perfect pairing</span></div></div></div></article>
-      <article class="hit-card"><div class="hit-photo"><span class="hit-tag vegan" style="background:var(--leaf);color:var(--cream);"><span class="tdot" style="background:#a8d08d;"></span>Crispy Pick</span><img src="assets/honey-garlic-cauliflower.png" alt="Honey Garlic Cauliflower" loading="lazy"></div><div class="hit-body"><h3>Honey Garlic Cauliflower</h3><p class="hit-benefit">✓ Crispy cauliflower tossed in sticky honey garlic sauce — impossible to ignore.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$10.49</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Mango Lassi</button><span class="upsell-line-price">+$3</span><span class="upsell-line-note">· cool finish</span></div></div></div></article>
+      <article class="hit-card"><div class="hit-photo"><span class="hit-tag vegan" style="background:var(--leaf);color:var(--cream);"><span class="tdot" style="background:#a8d08d;"></span>Vegan Favorite</span><img src="/assets/chole-chawal.jpg" alt="Chole Chawal" loading="lazy"></div><div class="hit-body"><h3>Chole Chawal</h3><p class="hit-benefit">✓ Bold North Indian chickpea curry on basmati rice.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$9.99</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Butter roti</button><span class="upsell-line-price">+$2</span><span class="upsell-line-note">· perfect pairing</span></div></div></div></article>
+      <article class="hit-card"><div class="hit-photo"><span class="hit-tag vegan" style="background:var(--leaf);color:var(--cream);"><span class="tdot" style="background:#a8d08d;"></span>Crispy Pick</span><img src="/assets/honey-garlic-cauliflower.png" alt="Honey Garlic Cauliflower" loading="lazy"></div><div class="hit-body"><h3>Honey Garlic Cauliflower</h3><p class="hit-benefit">✓ Crispy cauliflower tossed in sticky honey garlic sauce — impossible to ignore.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$10.49</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Mango Lassi</button><span class="upsell-line-price">+$3</span><span class="upsell-line-note">· cool finish</span></div></div></div></article>
       <article class="hit-card"><div class="hit-photo"><span class="hit-tag vegan" style="background:var(--leaf);color:var(--cream);"><span class="tdot" style="background:#a8d08d;"></span>Comfort Bowl</span><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><rect width="400" height="300" fill="#E8A530"/><ellipse cx="200" cy="155" rx="150" ry="88" fill="#F6EFE2"/><ellipse cx="200" cy="150" rx="138" ry="76" fill="#F2B648"/><circle cx="150" cy="130" r="16" fill="#F6EFE2"/><circle cx="205" cy="115" r="18" fill="#F6EFE2"/><circle cx="255" cy="145" r="15" fill="#F6EFE2"/><circle cx="190" cy="175" r="14" fill="#5B6E3A" opacity=".7"/></svg></div><div class="hit-body"><h3>Mango Coconut Tofu Bowl</h3><p class="hit-benefit">✓ Creamy curry with a softer, sweeter finish.</p><div class="hit-foot"><div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;"><span class="hit-price">$13.99</span><a href="https://myrotiplace.bycalibre.ca/" class="hit-add">Add →</a></div><div class="upsell-line"><button type="button">+ Papadum</button><span class="upsell-line-price">+$3</span><span class="upsell-line-note">· extra crunch</span></div></div></div></article>
     </div>
   </div>
@@ -5308,7 +5333,7 @@ p { margin: 0 0 1em; }
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="footer-logo" aria-label="My Roti Place home">
-          <img src="assets/mrp-logo.png" alt="My Roti Place logo">
+          <img src="/assets/mrp-logo.png" alt="My Roti Place logo">
         </a>
         <p class="brand-line">Toronto's modern Indian roti house.</p>
         <p>Toronto's modern Indian roti, biryani & dosa. Open late. Fresh always. Direct ordering for quick pickup and easy reordering.</p>
@@ -5316,7 +5341,7 @@ p { margin: 0 0 1em; }
       <div><h5>Order</h5><ul><li><a href="https://myrotiplace.bycalibre.ca/">Pickup</a></li><li><a href="https://myrotiplace.bycalibre.ca/">Delivery</a></li><li><a href="#menu">Menu</a></li></ul></div>
       <div><h5>Visit</h5><ul><li><a href="locations.html">All 14 Locations</a></li><li><a href="late-night.html">Late Night</a></li><li><a href="catering.html">Catering</a></li></ul></div>
       <div><h5>About</h5><ul><li><a href="our-story.html">Chef KK</a></li><li><a href="press.html">Press</a></li><li><a href="contact.html">Contact</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-      <div><h5>Follow us</h5><div class="socials"><!-- Verify exact social handles before launch. --><a href="https://www.instagram.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a href="https://www.facebook.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4H16V5.5c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.3v2.5H9v2.8h2.1v7h2.4Z"/></svg></a></div></div>
+      <div><h5>Follow us</h5><div class="socials"><!-- Verify exact social handles before launch. --><a class="social-icon-circle" href="https://www.instagram.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a class="social-icon-circle" href="https://www.facebook.com/myrotiplace" target="_blank" rel="noopener noreferrer" aria-label="My Roti Place Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4H16V5.5c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.3v2.5H9v2.8h2.1v7h2.4Z"/></svg></a></div></div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> My Roti Place.</span>
