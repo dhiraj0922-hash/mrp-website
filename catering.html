@@ -3,9 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catering — My Roti Place</title>
-<meta name="description" content="My Roti Place catering for office lunches, parties, and group orders.">
+<title>Indian Catering Toronto for Office Lunches, Events & Group Orders | My Roti Place</title>
+<meta name="description" content="Order Indian catering in Toronto and Ontario for office lunches, events and group meals. Halal, vegetarian and vegan options, roti bowls, biryani trays, sides and desserts from My Roti Place.">
+<link rel="canonical" href="https://myrotiplace.com/catering.html">
 <link rel="icon" href="/assets/mrp-logo.png">
+<meta property="og:title" content="Indian Catering Toronto for Office Lunches, Events & Group Orders | My Roti Place">
+<meta property="og:description" content="Order Indian catering in Toronto and Ontario for office lunches, events and group meals. Halal, vegetarian and vegan options, roti bowls, biryani trays, sides and desserts from My Roti Place.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myrotiplace.com/catering.html">
+<meta property="og:image" content="https://myrotiplace.com/assets/butter-chicken-roti.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Indian Catering Toronto for Office Lunches, Events & Group Orders | My Roti Place">
+<meta name="twitter:description" content="Order Indian catering in Toronto and Ontario for office lunches, events and group meals. Halal, vegetarian and vegan options, roti bowls, biryani trays, sides and desserts from My Roti Place.">
+<meta name="twitter:image" content="https://myrotiplace.com/assets/butter-chicken-roti.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://myrotiplace.com/catering.html#webpage",
+      "url": "https://myrotiplace.com/catering.html",
+      "name": "Indian Catering Toronto for Office Lunches, Events & Group Orders | My Roti Place",
+      "description": "Order Indian catering in Toronto and Ontario for office lunches, events and group meals. Halal, vegetarian and vegan options, roti bowls, biryani trays, sides and desserts from My Roti Place."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://myrotiplace.com/catering.html#service",
+      "name": "My Roti Place Catering",
+      "provider": {
+        "@type": "Restaurant",
+        "name": "My Roti Place / My Dosa Place",
+        "url": "https://myrotiplace.com/",
+        "telephone": "+1-647-350-3672",
+        "servesCuisine": "Indian",
+        "priceRange": "$10–20"
+      },
+      "serviceType": "Indian catering",
+      "areaServed": ["Toronto", "Mississauga", "Scarborough", "Oshawa", "London", "Stoney Creek"],
+      "url": "https://myrotiplace.com/catering.html",
+      "description": "Indian catering for office lunches, events and group meals with halal, vegetarian and vegan options, roti bowls, biryani trays, sides and desserts."
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -395,6 +436,152 @@ p { margin: 0 0 1em; }
   .lead-form-card { padding: 1.1rem; }
 }
 
+/* =========== Catering Category Section =========== */
+.catering-categories {
+  background: var(--cream);
+  padding: clamp(4rem, 9vw, 8rem) 0;
+}
+.catering-categories .section-head {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.catering-categories .section-head h2 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--charcoal);
+}
+.catering-categories .section-head h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--curry-red);
+}
+.catering-categories .section-head .lede {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 58ch;
+  margin: 0 auto;
+}
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.cat-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--charcoal);
+  min-height: 240px;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  box-shadow: 0 6px 24px -8px rgba(31, 26, 21, 0.22);
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -12px rgba(31, 26, 21, 0.32);
+}
+.cat-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .55s ease;
+}
+.cat-card:hover .cat-card-img {
+  transform: scale(1.06);
+}
+.cat-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(31, 26, 21, 0.82) 0%,
+    rgba(31, 26, 21, 0.38) 50%,
+    rgba(31, 26, 21, 0.08) 100%
+  );
+  transition: background .28s ease;
+}
+.cat-card:hover .cat-card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(158, 43, 31, 0.82) 0%,
+    rgba(31, 26, 21, 0.42) 55%,
+    rgba(31, 26, 21, 0.06) 100%
+  );
+}
+.cat-card-body {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem 1.6rem;
+  width: 100%;
+}
+.cat-card-label {
+  display: block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  margin-bottom: .45rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .28s ease .06s, transform .28s ease .06s;
+}
+.cat-card:hover .cat-card-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cat-card-name {
+  font-family: var(--f-display);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 500;
+  color: var(--cream);
+  line-height: 1.15;
+  margin: 0 0 .6rem;
+  letter-spacing: -0.01em;
+}
+.cat-card-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--curry-red);
+  color: var(--cream);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background .2s ease, transform .2s ease;
+  flex-shrink: 0;
+}
+.cat-card:hover .cat-card-arrow {
+  background: var(--turmeric);
+  color: var(--charcoal);
+  transform: translateX(3px);
+}
+.cat-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+/* No-image fallback: colour gradient placeholder */
+.cat-card.no-img {
+  background: linear-gradient(135deg, var(--charcoal) 0%, #2e2118 100%);
+}
+/* Text-only cards (no image): slightly reduced min-height */
+.cat-card.no-img .cat-card-body {
+  padding: 2.2rem 1.6rem 1.6rem;
+}
+/* Responsive */
+@media (max-width: 640px) {
+  .cat-grid { grid-template-columns: 1fr; }
+  .cat-card { min-height: 200px; }
+}
+
 </style>
 </head>
 <body>
@@ -507,6 +694,208 @@ p { margin: 0 0 1em; }
       </div>
     </div>
   </section>
+
+  <!-- =========== Catering Categories =========== -->
+  <section class="catering-categories" id="catering-categories" aria-label="Catering menu categories">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Browse Our Menu</span>
+        <h2>Every occasion, <em>covered.</em></h2>
+        <p class="lede">From tandoori BBQ packages to corporate lunches and sweet finishes — explore everything My Roti Place offers for your next event.</p>
+      </div>
+
+      <div class="cat-grid">
+
+        <!-- Summer Tandoori BBQ Packages -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card" id="cat-tandoori-bbq" aria-label="Summer Tandoori BBQ Packages">
+          <img src="/assets/images/catering/tandoori-bbq-package.jpg" alt="Tandoori BBQ spread" class="cat-card-img" loading="lazy" onerror="this.style.display='none'">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Seasonal Special</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Summer Tandoori BBQ Packages</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Indian Box Meals -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card" id="cat-box-meals" aria-label="Indian Box Meals">
+          <img src="/assets/images/catering/indian-box-lunch.jpeg" alt="Indian box meal" class="cat-card-img" loading="lazy" onerror="this.style.display='none'">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Individual</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Indian Box Meals</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Breakfast -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-breakfast" aria-label="Breakfast">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Morning Service</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Breakfast</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Corporate Lunch Packages -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card" id="cat-corporate-lunch" aria-label="Corporate Lunch Packages">
+          <img src="/assets/images/catering/corporate-lunch-catering.jpeg" alt="Corporate lunch spread" class="cat-card-img" loading="lazy" onerror="this.style.display='none'">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Office Favourites</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Corporate Lunch Packages</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Roti Wraps -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card" id="cat-roti-wraps" aria-label="Roti Wraps">
+          <img src="/assets/images/catering/roti-wraps.jpeg" alt="Roti wraps" class="cat-card-img" loading="lazy" onerror="this.style.display='none'">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Signature</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Roti Wraps</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Individual Salad Bowls -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-salad-bowls" aria-label="Individual Salad Bowls">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Fresh &amp; Light</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Individual Salad Bowls</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Appetizers -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-appetizers" aria-label="Appetizers">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Starters</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Appetizers</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Hot Entrees -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card" id="cat-hot-entrees" aria-label="Hot Entrees">
+          <img src="/assets/images/catering/hot-indian-entrees.jpeg" alt="Hot Indian entrees" class="cat-card-img" loading="lazy" onerror="this.style.display='none'">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Mains</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Hot Entrees</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Platters -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-platters" aria-label="Platters">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Group Sharing</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Platters</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Protein Platters -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card" id="cat-protein-platters" aria-label="Protein Platters">
+          <img src="/assets/images/catering/tandoori-malai-protein-platter.jpg" alt="Tandoori malai protein platter" class="cat-card-img" loading="lazy" onerror="this.style.display='none'">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">High Protein</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Protein Platters</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Salads -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-salads" aria-label="Salads">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Fresh Sides</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Salads</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Individual Meal Menu -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-individual-meal" aria-label="Individual Meal Menu">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Solo Portions</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Individual Meal Menu</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Sweets & Desserts -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-sweets" aria-label="Sweets and Desserts">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Finish Sweet</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Sweets &amp; Desserts</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Beverages -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-beverages" aria-label="Beverages">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Drinks</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Beverages</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Dietary Options -->
+        <a href="https://myrotiplace.bycalibre.ca/" class="cat-card no-img" id="cat-dietary" aria-label="Dietary Options">
+          <div class="cat-card-overlay"></div>
+          <div class="cat-card-body">
+            <span class="cat-card-label">Inclusive Menu</span>
+            <div class="cat-card-footer">
+              <h3 class="cat-card-name">Dietary Options</h3>
+              <span class="cat-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+        </a>
+
+      </div><!-- /.cat-grid -->
+    </div><!-- /.container -->
+  </section><!-- /.catering-categories -->
+
 </main>
 
 <footer class="site-footer">

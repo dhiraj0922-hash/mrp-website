@@ -7,31 +7,83 @@
 <meta name="description" content="Toronto's #1 roti. Chef KK's butter chicken roti, biryani, dosa. 14 Toronto + Ontario locations, 4 open past midnight. Order pickup or delivery — ready in ~15 minutes.">
 <link rel="canonical" href="https://myrotiplace.com/">
 <link rel="icon" href="/assets/mrp-logo.png">
+<meta property="og:title" content="Butter Chicken Roti Toronto — Pickup in 15 Min | My Roti Place">
+<meta property="og:description" content="Toronto's #1 roti. Chef KK's butter chicken roti, biryani, dosa. 14 Toronto + Ontario locations, 4 open past midnight. Order pickup or delivery — ready in ~15 minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myrotiplace.com/">
+<meta property="og:image" content="https://myrotiplace.com/assets/butter-chicken-roti.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Butter Chicken Roti Toronto — Pickup in 15 Min | My Roti Place">
+<meta name="twitter:description" content="Toronto's #1 roti. Chef KK's butter chicken roti, biryani, dosa. 14 Toronto + Ontario locations, 4 open past midnight. Order pickup or delivery — ready in ~15 minutes.">
+<meta name="twitter:image" content="https://myrotiplace.com/assets/butter-chicken-roti.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "@id": "https://myrotiplace.com/#restaurant",
-  "name": "My Roti Place",
-  "url": "https://myrotiplace.com/",
-  "image": "https://myrotiplace.com/assets/butter-chicken-roti.jpg",
-  "logo": "https://myrotiplace.com/assets/mrp-logo.png",
-  "telephone": "+1-647-350-3672",
-  "priceRange": "$$",
-  "servesCuisine": ["Indian", "Roti", "Biryani", "Dosa"],
-  "description": "My Roti Place serves butter chicken roti, biryani, bowls, and late-night pickup across Toronto and Ontario.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Toronto",
-    "addressRegion": "ON",
-    "addressCountry": "CA"
-  },
-  "areaServed": ["Toronto", "GTA", "Ontario"],
-  "hasMenu": "https://myrotiplace.com/menu.html",
-  "potentialAction": {
-    "@type": "OrderAction",
-    "target": "https://myrotiplace.bycalibre.ca/"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://myrotiplace.com/#organization",
+      "name": "My Roti Place / My Dosa Place",
+      "url": "https://myrotiplace.com/",
+      "logo": "https://myrotiplace.com/assets/mrp-logo.png",
+      "telephone": "+1-647-350-3672",
+      "sameAs": [
+        "https://www.instagram.com/myrotiplace",
+        "https://www.facebook.com/myrotiplace"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://myrotiplace.com/#website",
+      "url": "https://myrotiplace.com/",
+      "name": "My Roti Place / My Dosa Place",
+      "publisher": { "@id": "https://myrotiplace.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://myrotiplace.com/menu.html"
+      }
+    },
+    {
+      "@type": "Restaurant",
+      "@id": "https://myrotiplace.com/#restaurant",
+      "name": "My Roti Place / My Dosa Place",
+      "url": "https://myrotiplace.com/",
+      "image": "https://myrotiplace.com/assets/butter-chicken-roti.jpg",
+      "logo": "https://myrotiplace.com/assets/mrp-logo.png",
+      "telephone": "+1-647-350-3672",
+      "priceRange": "$10–20",
+      "servesCuisine": "Indian",
+      "description": "Butter chicken roti, biryani, dosa, bowls, late-night pickup and delivery across Toronto and Ontario.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "areaServed": ["Toronto", "Mississauga", "Scarborough", "Oshawa", "London", "Stoney Creek"],
+      "sameAs": [
+        "https://www.instagram.com/myrotiplace",
+        "https://www.facebook.com/myrotiplace"
+      ],
+      "hasMenu": "https://myrotiplace.com/menu.html",
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": "https://myrotiplace.bycalibre.ca/"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://myrotiplace.com/#webpage",
+      "url": "https://myrotiplace.com/",
+      "name": "Butter Chicken Roti Toronto — Pickup in 15 Min | My Roti Place",
+      "isPartOf": { "@id": "https://myrotiplace.com/#website" },
+      "about": { "@id": "https://myrotiplace.com/#restaurant" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://myrotiplace.com/assets/butter-chicken-roti.jpg"
+      }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
