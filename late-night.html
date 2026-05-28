@@ -57,7 +57,7 @@
   --action-hover: #B23325;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   font-family: var(--f-body);
@@ -101,6 +101,14 @@ p { margin: 0 0 1em; }
 .trust-bar strong { color: var(--saffron); font-weight: 600; }
 @media (max-width: 640px) {
   .trust-bar { font-size: .75rem; gap: 1rem; }
+  .trust-bar .pip.hide-mobile { display: none; }
+}
+@media (max-width: 900px) and (orientation: landscape), (max-height: 500px) and (orientation: landscape) {
+  .trust-bar {
+    font-size: .74rem;
+    gap: .9rem;
+    padding: .45rem var(--gutter);
+  }
   .trust-bar .pip.hide-mobile { display: none; }
 }
 
@@ -363,6 +371,53 @@ p { margin: 0 0 1em; }
   .brand-logo img { height: 34px; }
   .nav-cta .btn-action { padding: .68rem .92rem; font-size: .78rem; }
   .nav-cta .btn-call { padding: .68rem .88rem; font-size: .78rem; }
+}
+@media (max-width: 900px) and (orientation: landscape), (max-height: 500px) and (orientation: landscape) {
+  .nav-links, .nav-cta .btn-find { display: none; }
+  .menu-toggle { display: block; }
+  .nav-row { gap: .75rem; padding: .7rem 0; }
+  .nav-cta {
+    gap: .45rem;
+    flex-shrink: 0;
+    min-width: 0;
+  }
+  .nav-cta .btn-action,
+  .nav-cta .btn-call {
+    min-height: 40px;
+    font-size: .79rem;
+  }
+  .nav-cta .btn-action { padding: .68rem .92rem; }
+  .nav-cta .btn-call { padding: .68rem .88rem; }
+  .btn-call .call-full { display: none; }
+  .btn-call .call-short { display: inline; }
+  .mobile-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    padding: 1rem var(--gutter);
+    border-bottom: 1px solid var(--line);
+    gap: .8rem;
+    max-height: calc(100vh - 78px);
+    overflow-y: auto;
+    box-shadow: 0 18px 34px -26px rgba(31, 26, 21, 0.34);
+  }
+  .mobile-open .nav-links a,
+  .mobile-open .nav-links button { min-height: 44px; display: inline-flex; align-items: center; }
+  .menu-popover { position: static; width: 100%; margin-top: .75rem; opacity: 1; transform: none; pointer-events: none; display: none; box-shadow: none; border-radius: 16px; background: rgba(255,255,255,.66); }
+  .menu-nav-item.is-open .menu-popover { display: grid; pointer-events: auto; }
+  .late-v2 { padding: 2rem 0 2.35rem; }
+  .late-v2 h1, .late-v2 h2 { font-size: clamp(2.25rem, 5.8vw, 3.35rem); }
+  .late-v2 .lede { font-size: 1rem; margin-bottom: 1.2rem; }
+  .dual-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .late-loc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+  .late-loc { padding: 1.35rem 1.2rem 1.15rem; }
+  .cta-pair { gap: .65rem; }
+  .cta-pair a { min-height: 44px; justify-content: center; }
+  .footer-grid { grid-template-columns: 1fr; }
 }
 
 </style>
